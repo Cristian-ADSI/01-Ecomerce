@@ -39,10 +39,10 @@ header {
             }
             button {
                 border: none;
-                background-color: $red;
+                background-color: $red-l;
                 &:hover {
                     a {
-                        background-color: $red-d;
+                        background-color: $red;
                     }
                 }
                 a {

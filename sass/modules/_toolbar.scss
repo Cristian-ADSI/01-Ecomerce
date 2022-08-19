@@ -13,43 +13,95 @@
     background-color: none;
     font-size: 14px;
     line-height: 40px;
+    opacity: 0.7;
   }
-  .menu_badge {
-    max-height: 100%;
-    width: 90px;
 
-    &:hover {
+  .content {
+    display: flex;
+
+    .menu_badge {
+      max-height: 100%;
+      width: 90px;
+      font-weight: 300;
+
+      &:hover {
+        .items {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .badge_value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        color: $txtCol-Dark;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        opacity: 0.7;
+      }
+
       .items {
-        transform: translateY(0);
-        opacity: 1;
+        width: 100%;
+        background-color: $white;
+        text-align: center;
+        opacity: 0;
+        transition: all ease-in-out 0.1s;
+        transform: translateY(10px);
+        pointer-events: none;
+        li {
+          cursor: pointer;
+          padding: 15px 0;
+          border-bottom: solid 1px $bodyBg;
+          &:hover {
+            color: $red;
+          }
+        }
       }
     }
 
-    .badge_value {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-      color: $txtCol-Dark;
-      cursor: pointer;
-      font-size: 14px;
-      line-height: 40px;
-      text-align: center;
-    }
+    .menu_lang {
+      max-height: 100%;
+      padding: 0 15px;
+      font-weight: 300;
+      border-right: 1px solid rgba(212, 202, 236, 0.4);
+      border-left: 1px solid rgba(212, 202, 236, 0.4);
+      &:hover {
+        .items {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
 
-    .items {
-      width: 100%;
-      background-color: $white;
-      text-align: center;
-      opacity: 0;
-      transition: all ease-in-out 0.1s;
-      transform: translateY(10px);
-      li {
+      .lang_value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $txtCol-Dark;
         cursor: pointer;
-        padding: 15px 0;
-        border-bottom: solid 1px $bodyBg;
-        &:hover{
-            color: $red; 
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        opacity: 0.7;
+      }
+
+      .items {
+        width: 100%;
+        background-color: $white;
+        text-align: center;
+        opacity: 0;
+        transition: all ease-in-out 0.1s;
+        transform: translateY(10px);
+        li {
+          cursor: pointer;
+          padding: 15px 0;
+          border-bottom: solid 1px $bodyBg;
+          &:hover {
+            color: $red;
+          }
         }
       }
     }

@@ -1,0 +1,88 @@
+@import "../partials//variables";
+@import "../partials//mixins";
+.navbar {
+    @include d-flex(center, space-between);
+
+    background-color: $white;
+    padding: 0 $desktop-padding;
+    height: 90px;
+    width: 100%;
+
+    .brand {
+        a {
+            color: $txtCol;
+            font-family: "Intern", sans-serif;
+            font-size: 25px;
+            font-weight: 300;
+            span {
+                color: $red;
+                font-weight: 900;
+            }
+        }
+    }
+
+    .content {
+        height: 100%;
+        @include d-flex();
+        gap: 20px;
+        .menu {
+            @include d-flex();
+            gap: 15px;
+            li {
+                a {
+                    color: $txtCol;
+                    font-size: 14px;
+                    transition: all ease-in-out 0.1s;
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+        .tools {
+            @include d-flex();
+            gap: 20px;
+            .search {
+                @include d-flex();
+                height: 100%;
+                input {
+                    border: none;
+                    outline: none;
+                    height: 30px;
+                    text-align: center;
+                    font-size: 16px;
+                }
+                span {
+                    display: inline-block;
+                    background-color: $bodyBg-Dark;
+                    border-radius: 0 5px 5px 0;
+                    color: $white;
+                    padding: 3px 8px;
+                    line-height: 30px;
+                }
+            }
+            .cart {
+                position: relative;
+                span {
+                    font-size: 40px;
+                    color: $txtCol-70;
+                }
+                .items {
+                    position: absolute;
+                    top: -10px;
+                    right: -15px;
+                    height: 25px;
+                    width: 25px;
+                    
+                    color: $white;
+                    font-size: 16px;
+                    line-height: 25px;
+                    text-align: center;
+
+                    background-color: $red;
+                    clip-path: circle();
+                }
+            }
+        }
+    }
+}

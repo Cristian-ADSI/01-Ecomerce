@@ -22,7 +22,9 @@
     .menu_badge {
       font-weight: 300;
       max-height: 100%;
+      position: relative;
       width: 90px;
+      z-index: 10;
 
       &:hover {
         .items {
@@ -47,6 +49,9 @@
       }
 
       .items {
+        position: relative;
+        z-index: 10;
+
         text-align: center;
         width: 100%;
 
@@ -55,6 +60,7 @@
         pointer-events: none;
         transition: all ease-in-out 0.1s;
         transform: translateY(10px);
+
         li {
           color: $txtCol;
           cursor: pointer;
@@ -73,6 +79,9 @@
       border-left: 1px solid rgba(212, 202, 236, 0.4);
       max-height: 100%;
       font-weight: 300;
+      position: relative;
+      z-index: 10;
+      
       &:hover {
         .items {
           opacity: 1;
@@ -121,7 +130,9 @@
     .menu_acount {
       font-weight: 300;
       max-height: 100%;
+      position: relative;
       width: 130px;
+      z-index: 10;
 
       &:hover {
         .items {

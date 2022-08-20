@@ -1,5 +1,5 @@
-@use "./modules/header"; 
-
+@use "./modules/header";
+@use "./modules//categories";
 
 @import "./partials/variables";
 @import "./partials/fonts";
@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: $bodyBg;  
+  background-color: $bodyBg;
 }
 
 h1,

@@ -1,5 +1,7 @@
-@import "../partials//variables";
-@import "../partials//mixins";
+@import "../partials/variables";
+@import "../partials/mixins";
+@import "../partials/extends"; 
+
 .navbar {
     position: relative;
     @include d-flex(center, space-between);
@@ -12,7 +14,7 @@
     .brand {
         a {
             color: $txtCol;
-            font-family: "Poppins", sans-serif;
+            @extend %Poppins;
             font-size: 25px;
             font-weight: 500;
             span {

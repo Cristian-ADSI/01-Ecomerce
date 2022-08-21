@@ -1,0 +1,56 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+@import "../partials/extends";
+
+.new-arrivals {
+    padding: 0 $desktop-padding;
+    margin-top: 80px;
+    .title {
+        color: $txtCol;
+        font-weight: 500;
+        font-size: 45px;
+        text-align: center;
+        @extend %Poppins;
+        &:after {
+            content: "";
+            display: block;
+            height: 4px;
+            width: 7%;
+
+            background-color: $red-l;
+            margin: 15px auto;
+        }
+    }
+    .tab-menu {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+        li {
+            color: $txtCol-70;
+            cursor: pointer;
+            display: block;
+            font-weight: 600;
+            background-color: $white;
+            padding: 10px 30px;
+            transition: all ease-in-out 0.1s;
+            @extend %Poppins;
+
+            &:hover {
+                background-color: $red-l;
+                color: $white;
+            }
+            &.active {
+                color: $white;
+                background-color: $red-l;
+                &:hover {
+                    background-color: $red;
+                }
+            }
+        }
+    }
+
+    .new-arrivals__products {
+        background-color: red;
+        display: flex; 
+    }
+}

@@ -64,6 +64,72 @@ const products = [
       sale: 40,
     },
   },
+  {
+    color: 'Brown',
+    brand: 'Block Buster',
+    image: './assets/products/usex-zips-RFUS001.webp',
+    name: `Low Zips`,
+    size: '34',
+    product: {
+      discount: 0,
+      price: 189,
+      reference: 'RFUS001',
+      sale: 0,
+    },
+  },
+  {
+    color: 'Brown',
+    brand: 'Capitals',
+    image: './assets/products/accs-wmen_wallet-RFAW001.webp',
+    name: `Leather Wallet`,
+    size: '',
+    product: {
+      discount: 0,
+      price: 120,
+      reference: 'RFUS001',
+      sale: 0,
+    },
+  },
+  {
+    color: 'Light Green',
+    brand: 'Capitals',
+    image: './assets/products/accs-sport_bag-RFASB01.webp',
+    name: `Sport Back`,
+    size: '',
+    product: {
+      discount: 0,
+      price: 547,
+      reference: 'RFUS001',
+      sale: 40,
+    },
+  },
+  {
+    color: 'Light Green',
+    brand: 'Capitals',
+    image: './assets/products/accs-bag-RFACB01.webp',
+    name: `Casual Back`, 
+    size: '',
+    product: {
+      discount: 0,
+      price: 610,
+      reference: 'RFUS001',
+      sale: 0,
+    },
+  },
+  {
+    color: 'Light Blue',
+    brand: 'Capitals',
+    image: './assets/products/accs-aviator_glasses-RFAAG01.webp',
+    name: `Aviator glasses`, 
+    size: '',
+    product: {
+      discount: 0,
+      price: 520,
+      reference: 'RFUS001',
+      sale: 20,
+    },
+  },
+
 ];
 
 const newArrivals = document.getElementById('new-arrivals__products');

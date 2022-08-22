@@ -5,6 +5,7 @@
 .new-arrivals {
     padding: 0 $desktop-padding;
     margin: 80px 0;
+    width: 100%;
     .title {
         color: $txtCol;
         font-weight: 500;
@@ -54,15 +55,15 @@
     }
 
     &__products {
-        margin-top: 50px;
+        margin-top: 50px ;
         @include d-flex(center, flex-start);
+        flex-wrap: wrap;
         .product {
             position: relative;
-            width: 20%;
+            width: 20%;            
             border-right: solid 1px $gray-l;
             background-color: $white;
             transition: all ease-in-out 0.2s;
-
             &:hover {
                 box-shadow: rgba(82, 82, 82, 0.1) 0 0 20px 1px;
                 z-index: 10;
@@ -104,6 +105,7 @@
                 height: 40px;
 
                 color: $white;
+                cursor: pointer;
                 background-color: $white;
                 border: none;
                 font-size: 14px;

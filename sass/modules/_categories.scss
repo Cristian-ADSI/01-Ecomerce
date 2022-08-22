@@ -1,12 +1,13 @@
-@import "../partials//variables";
-@import "../partials//mixins";
+@import "../partials/variables";
+@import "../partials/mixins"; 
+@import "../partials/extends"; 
 
 .categories {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 $desktop-padding;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     &__card {
         position: relative;
         display: block;
@@ -27,7 +28,7 @@
 
             color: $txtCol;
             background-color: $white;
-            font-family: "Poppins", sans-serif;
+            @extend %Poppins;
             font-size: 22px;
             font-weight: 600;
             padding: 5px 10px;

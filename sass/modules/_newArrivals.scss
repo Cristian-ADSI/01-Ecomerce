@@ -1,0 +1,132 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+@import "../partials/extends";
+
+.new-arrivals {
+    padding: 0 $desktop-padding;
+    margin: 80px 0;
+    width: 100%;
+    .title {
+        color: $txtCol;
+        font-weight: 500;
+        font-size: 45px;
+        text-align: center;
+        @extend %Poppins;
+        &:after {
+            content: "";
+            display: block;
+            height: 4px;
+            width: 7%;
+
+            background-color: $red-l;
+            margin: 15px auto;
+        }
+    }
+    .tab-menu {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+        li {
+            color: $txtCol-70;
+            cursor: pointer;
+            display: block;
+            font-weight: 600;
+            background-color: $white;
+            border: solid 1px $gray-l;
+            padding: 10px 30px;
+            transition: all ease-in-out 0.1s;
+            @extend %Poppins;
+
+            &:hover {
+                color: $white;
+                background-color: $red-l;
+                border: solid 1px $red-l;
+            }
+            &.active {
+                color: $white;
+                background-color: $red-l;
+                border: solid 1px $red-l;
+                &:hover {
+                    background-color: $red;
+                    border: solid 1px $red;
+                }
+            }
+        }
+    }
+
+    &__products {
+        margin-top: 50px ;
+        @include d-flex(center, flex-start);
+        flex-wrap: wrap;
+        .product {
+            position: relative;
+            width: 20%;            
+            border-right: solid 1px $gray-l;
+            background-color: $white;
+            transition: all ease-in-out 0.2s;
+            &:hover {
+                box-shadow: rgba(82, 82, 82, 0.1) 0 0 20px 1px;
+                z-index: 10;
+                .add-product {
+                    background-color: $red-l;
+                }
+            }
+            img {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .name {
+                color: $txtCol;
+                font-weight: 600;
+                margin-bottom: 10px;
+                padding: 0 20px;
+                text-align: center;
+                @extend %OpenSans;
+            }
+            .prices {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 20px;
+                .current {
+                    color: $red;
+                    font-weight: 600;
+                }
+                .discount,
+                .sale {
+                    text-decoration: line-through;
+                    color: $txtCol-50;
+                }
+            }
+            .add-product {
+                display: block;
+                width: 100%;
+                height: 40px;
+
+                color: $white;
+                cursor: pointer;
+                background-color: $white;
+                border: none;
+                font-size: 14px;
+                font-weight: 600;
+                transition: all ease-in-out 0.2s;
+                @extend %OpenSans;
+                &:hover {
+                    background-color: $red;
+                }
+            }
+            .label {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+
+                color: $white;
+                background-color: $red-l;
+                border-radius: 3px;
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}

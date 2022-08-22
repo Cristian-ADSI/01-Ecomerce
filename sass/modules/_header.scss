@@ -3,9 +3,12 @@
 
 @import "../partials/variables";
 @import "../partials/mixins";
+@import "../partials/extends"; 
+
+
 
 header {
-    margin-bottom: 20px; 
+    margin-bottom: 50px;  
     .banner {
         position: relative;
 
@@ -26,12 +29,12 @@ header {
             width: 80%;
             .tags {
                 color: $txtCol;
-                font-family: "Poppins", sans-serif;
+                @extend %Poppins;
                 margin-bottom: 30px;
             }
             .advertising {
                 color: $txtCol;
-                font-family: "Poppins", sans-serif;
+                @extend %Poppins;
                 font-size: 75px;
                 font-weight: 400;
                 line-height: 75px;
@@ -51,7 +54,7 @@ header {
                     color: $white;
                     font-size: 16px;
                     padding: 10px 25px;
-                    font-family: "Poppins", sans-serif;
+                    @extend %Poppins;
                     transition: all ease-in-out 0.2s;
                 }
             }

@@ -1,6 +1,6 @@
 @import "../partials/variables";
 @import "../partials/mixins";
-@import "../partials/extends"; 
+@import "../partials/extends";
 
 .navbar {
     position: relative;
@@ -66,9 +66,15 @@
             }
             .cart {
                 position: relative;
+                &:hover{
+                    .cart__list{
+                        @include menu-animate-in(100%);  
+                    }
+                }
                 span {
-                    font-size: 40px;
                     color: $txtCol-70;
+                    cursor: pointer;
+                    font-size: 40px;
                 }
                 .items {
                     position: absolute;
@@ -84,6 +90,42 @@
 
                     background-color: $red;
                     clip-path: circle();
+                }
+                &__list {
+                    position: absolute;
+                    bottom: 0px;
+                    right: -20px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    min-height: 150px;
+                    width: 280px;
+
+                    background-color: $white;
+                    @include menu-animate-out(113%);
+                    &-items {
+                        color: $txtCol-70;
+                        display: flex;
+                        height: calc(100% - 40px);
+                        justify-content: center;
+                        padding-top: 15px;
+                    }
+                    button {
+                        border: none;
+                        background-color: $red-l;
+                        color: $white;
+                        cursor: pointer;
+                        font-size: 14px;
+                        font-weight: 600;
+                        height: 40px;
+                        transition: all ease-in-out 0.2s;
+                        @extend %OpenSans;
+
+                        &:hover {
+                            background-color: $red;
+                        }
+                    }
                 }
             }
         }

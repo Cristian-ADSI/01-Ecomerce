@@ -1,28 +1,67 @@
 const products = [
   {
+    color: 'cockie',
+    brand: 'Block Buster',
+    image: './assets/products/wmen-jersey-RFWJ001.webp',  
+    name: `Women's Jersey`,
+    size: 'L',
+    product: {
+      discount: 0,
+      price: 120,
+      reference: 'RFWJ001',
+      sale: 0,
+    },
+  },
+  {
+    color: 'cockie',
+    brand: 'Block Buster',
+    image: './assets/products/wmen-jersey-RFWJ002.webp', 
+    name: `Women's Jersey`,
+    size: 'L',
+    product: {
+      discount: 0,
+      price: 610,
+      reference: 'RFWJ002',
+      sale: 0,
+    },
+  },
+  {
     color: 'Brown',
     brand: 'Block Buster',
-    image: './assets/products/men-hoddie.webp',
+    image: './assets/products/men-hoddie-RFMH001.webp',
     name: `Men's Hoddie`,
     size: 'L',
     product: {
-      discount: 50.0,
-      price: 590.0,
+      discount: 50,
+      price: 590,
       reference: 'RFMH001',
-      sale: 413.0,
+      sale: 0,
     },
   },
   {
     color: 'Militar Green',
     brand: 'Capitals',
-    image: './assets/products/men-jersey.webp',
+    image: './assets/products/men-jersey-RFMJ001.webp',
     name: `Men's Jersey`,
     size: 'L',
     product: {
       discount: 0,
-      price: 180.0,
+      price: 180,
       reference: 'RFMJ001',
       sale: 0,
+    },
+  },
+  {
+    color: 'Brown',
+    brand: 'Capitals',
+    image: './assets/products/men-coat-RFMC001.webp',
+    name: `Men's Coat`,
+    size: 'M',
+    product: {
+      discount: 0,
+      price: 410,
+      reference: 'RFMC001',
+      sale: 40,
     },
   },
 ];
@@ -45,11 +84,19 @@ for (const product of products) {
   card.innerHTML = `
     <img src="${image}" alt="${name}"/>
     <p class="name">${name}</p>
-    <span class="price">$${price - discount}</span>
-    <span class="discount">${!discount ? '' : '$' + price} </span>
+    <div class="prices">
+        <span class="current">$${
+          price - discount - (price * sale) / 100
+        }.00</span>
+        ${!discount ? '' : '<span class="discount">' + price + ' 00 </span>'}
+        ${!sale ? '' : '<span class="sale">' + price + ' 00 </span>'}
+    </div>
+    
+    ${!sale ? '' : '<span class="label">SALE -' + sale + '%</span>'}
+    
     <button class="add-product">ADD TO BAG</button>
   `;
-  
+
   fragment.appendChild(card);
 }
 newArrivals.appendChild(fragment);

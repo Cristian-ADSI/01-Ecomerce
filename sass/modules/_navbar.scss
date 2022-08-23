@@ -114,10 +114,44 @@
 
                         table {
                             width: 100%;
-
                             th {
                                 text-transform: capitalize;
                                 font-size: 12px;
+                            }
+
+                            td {
+                                text-align: center;
+                                &.image {
+                                    width: 50px;
+                                    img {
+                                        width: 50px;
+                                    }
+                                }
+                                &.name {
+                                    width: 60px;
+                                    font-size: 12px;
+                                }
+                                &.price {
+                                    width: 65px;
+                                    font-size: 12px;
+                                }
+                                &.count {
+                                    width: 50px;
+                                    font-size: 12px;
+                                }
+                                &.remove {
+                                    width: 50px;
+                                    a {
+                                        display: block;
+                                        background-color: $red-l;
+                                        clip-path: circle();
+                                        color: $white;
+                                        line-height: 25px;
+                                        width: 25px;
+                                        height: 25px; 
+                                        font-weight: 600;
+                                    }
+                                }
                             }
                         }
                     }

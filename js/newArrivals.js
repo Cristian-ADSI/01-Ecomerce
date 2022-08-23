@@ -1,6 +1,6 @@
 const products = [
   {
-    color: 'cockie',
+    color: '#FF9B1C',
     brand: 'Block Buster',
     image: './assets/products/wmen-jersey-RFWJ001.webp',  
     name: `Women's Jersey`,
@@ -13,7 +13,7 @@ const products = [
     },
   },
   {
-    color: 'cockie',
+    color: '#D39240',
     brand: 'Block Buster',
     image: './assets/products/wmen-jersey-RFWJ002.webp', 
     name: `Women's Jersey`,
@@ -26,7 +26,7 @@ const products = [
     },
   },
   {
-    color: 'Brown',
+    color: '#4C3240',
     brand: 'Block Buster',
     image: './assets/products/men-hoddie-RFMH001.webp',
     name: `Men's Hoddie`,
@@ -39,7 +39,7 @@ const products = [
     },
   },
   {
-    color: 'Militar Green',
+    color: '#637872',
     brand: 'Capitals',
     image: './assets/products/men-jersey-RFMJ001.webp',
     name: `Men's Jersey`,
@@ -52,7 +52,7 @@ const products = [
     },
   },
   {
-    color: 'Brown',
+    color: '#DBA96B',
     brand: 'Capitals',
     image: './assets/products/men-coat-RFMC001.webp',
     name: `Men's Coat`,
@@ -65,7 +65,7 @@ const products = [
     },
   },
   {
-    color: 'Brown',
+    color: '#DBA96B',
     brand: 'Block Buster',
     image: './assets/products/usex-zips-RFUS001.webp',
     name: `Low Zips`,
@@ -78,7 +78,7 @@ const products = [
     },
   },
   {
-    color: 'Brown',
+    color: '#CE7F3C',
     brand: 'Capitals',
     image: './assets/products/accs-wmen_wallet-RFAW001.webp',
     name: `Leather Wallet`,
@@ -91,10 +91,10 @@ const products = [
     },
   },
   {
-    color: 'Light Green',
+    color: '#C0CEBE',
     brand: 'Capitals',
     image: './assets/products/accs-sport_bag-RFASB01.webp',
-    name: `Sport Back`,
+    name: `Sport Bag`,
     size: '',
     product: {
       discount: 0,
@@ -104,10 +104,10 @@ const products = [
     },
   },
   {
-    color: 'Light Green',
+    color: '#6F571D',
     brand: 'Capitals',
     image: './assets/products/accs-bag-RFACB01.webp',
-    name: `Casual Back`, 
+    name: `Casual Bag`, 
     size: '',
     product: {
       discount: 0,
@@ -117,7 +117,7 @@ const products = [
     },
   },
   {
-    color: 'Light Blue',
+    color: '#5B5F7F',
     brand: 'Capitals',
     image: './assets/products/accs-aviator_glasses-RFAAG01.webp',
     name: `Aviator glasses`, 
@@ -138,6 +138,8 @@ for (const product of products) {
   const card = document.createElement('div');
 
   const {
+    brand,
+    color,
     image,
     name,
     product: { price, discount, sale, reference },
@@ -149,6 +151,10 @@ for (const product of products) {
   card.innerHTML = `
     <img src="${image}" alt="${name}"/>
     <p class="name">${name}</p>
+    <p class="brand"> 
+      Brand - ${brand} 
+      <span style="background-color:${color}"></span>
+    </p>
     <div class="prices">
         <span class="current">$${
           price - discount - (price * sale) / 100

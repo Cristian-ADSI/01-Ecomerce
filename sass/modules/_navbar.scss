@@ -66,9 +66,9 @@
             }
             .cart {
                 position: relative;
-                &:hover{
-                    .cart__list{
-                        @include menu-animate-in(100%);  
+                &:hover {
+                    .cart__list {
+                        @include menu-animate-in(100%);
                     }
                 }
                 span {
@@ -104,12 +104,22 @@
 
                     background-color: $white;
                     @include menu-animate-out(113%);
+
                     &-items {
                         color: $txtCol-70;
                         display: flex;
                         height: calc(100% - 40px);
                         justify-content: center;
-                        padding-top: 15px;
+                        padding-top: 20px;
+
+                        table {
+                            width: 100%;
+
+                            th {
+                                text-transform: capitalize;
+                                font-size: 12px;
+                            }
+                        }
                     }
                     button {
                         border: none;

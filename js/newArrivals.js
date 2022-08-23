@@ -86,7 +86,7 @@ const products = [
     product: {
       discount: 0,
       price: 120,
-      reference: 'RFUS001',
+      reference: 'RFAW001',
       sale: 0,
     },
   },
@@ -99,7 +99,7 @@ const products = [
     product: {
       discount: 0,
       price: 547,
-      reference: 'RFUS001',
+      reference: 'RFASB01',
       sale: 40,
     },
   },
@@ -112,7 +112,7 @@ const products = [
     product: {
       discount: 0,
       price: 610,
-      reference: 'RFUS001',
+      reference: 'RFACB01',
       sale: 0,
     },
   },
@@ -125,14 +125,13 @@ const products = [
     product: {
       discount: 0,
       price: 520,
-      reference: 'RFUS001',
+      reference: 'RFAAG01',
       sale: 20,
     },
   },
-
 ];
 
-const newArrivals = document.getElementById('new-arrivals__products');
+const newArrivals = document.getElementById('arrivals-products');
 const fragment = document.createDocumentFragment();
 
 for (const product of products) {

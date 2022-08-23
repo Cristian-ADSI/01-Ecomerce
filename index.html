@@ -15,6 +15,7 @@
 
   <body>
     <header>
+      <!-- Topbar  -->
       <nav>
         <!-- Toolbar  -->
         <div class="toolbar">
@@ -24,6 +25,7 @@
               <p class="badge_value">
                 USD<span class="material-symbols-outlined">expand_more</span>
               </p>
+
               <ul class="items">
                 <li class="CAD">CAD</li>
                 <li class="AUD">AUD</li>
@@ -74,11 +76,13 @@
         </div>
         <!-- Navbar  -->
         <div class="navbar">
+          
           <div class="brand">
             <a href="/">COLOR<span>SHOP</span></a>
           </div>
 
           <div class="content">
+
             <ul class="menu">
               <li><a href="/">HOME</a></li>
               <li><a href="/">SHOP</a></li>
@@ -94,14 +98,32 @@
                 <span class="material-symbols-outlined"> search </span>
               </div>
 
-              <div class="cart">
+              <div id="cart" class="cart">
                 <span class="items">0</span>
                 <span class="material-symbols-outlined"> local_mall </span>
+                <div class="cart__list">
+                  <div class="cart__list-items">
+                    <table id="cart-table">
+                      <thead>
+                        <tr>
+                          <th>Image</th>
+                          <th>name</th>
+                          <th>price</th>
+                          <th>count</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                    </table>
+                    <tbody></tbody>
+                  </div>
+                  <button id="empty-cart">EMPTY CART</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </nav>
+      <!-- Banner -->
       <section class="banner">
         <div class="content">
           <p class="tags">SPRING / SUMMER COLLECTION 2017</p>
@@ -134,7 +156,7 @@
         </a>
       </section>
       <!-- New Arrivals  -->
-      <section class="new-arrivals">
+      <section class="arrivals">
         <h2 class="title">New Arrivals</h2>
         <ul class="tab-menu">
           <li class="active">ALL</li>
@@ -143,9 +165,10 @@
           <li class="">MEN'S</li>
         </ul>
 
-        <div id="new-arrivals__products" class="new-arrivals__products"></div>
+        <div id="arrivals-products" class="arrivals-products"></div>
       </section>
     </main>
+    <script src="./js/cart.js"></script>
     <script src="./js/newArrivals.js"></script>
   </body>
 </html>

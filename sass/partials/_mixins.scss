@@ -4,3 +4,15 @@
     justify-content: $justify;
 }
 
+@mixin menu-animate-out($y-pos) {
+    opacity: 0;
+    pointer-events: none;
+    transition: all ease-in-out 0.1s;
+    transform: translateY($y-pos);
+}
+
+@mixin menu-animate-in($y-pos) {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY($y-pos);
+}

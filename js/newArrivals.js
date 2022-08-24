@@ -170,4 +170,5 @@ for (const product of products) {
 
   fragment.appendChild(card);
 }
+
 newArrivals.appendChild(fragment);

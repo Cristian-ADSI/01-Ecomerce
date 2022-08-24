@@ -14,31 +14,44 @@ function addProduct(e) {
   e.preventDefault();
 
   if (e.target.classList.contains('add-product')) {
-    const product = e.target.parentElement;
-    const atributes = getAtributes(product);
-    productsCart = [...productsCart, atributes];
+    const element = e.target.parentElement;
+    getNewProduct(element);
     chargeCart();
   }
 }
-function getAtributes(product) {
-  const properties = {
-    id: product.id,
-    image: product.querySelector('img').src,
-    name: product.querySelector('.name').textContent,
-    brand: product.querySelector('.brand').textContent,
+
+function getNewProduct(element) {
+
+  const newProduct = {
+    brand:  element.querySelector('.brand').textContent,
     cantidad: 1,
-    price: product.querySelector('.current').textContent,
+    id:     element.id,
+    image:  element.querySelector('img').src,
+    name:   element.querySelector('.name').textContent,
+    price:  element.querySelector('.current').textContent,
   };
 
-  return properties;
+  const exists = productsCart.some((product) => product.id === newProduct.id);
+
+  if (exists) {
+    const updatedProduct = productsCart.map((product) => {
+      if (product.id === newProduct.id) { product.cantidad++; return product;}
+      if (product.id !== newProduct.id) { return product;}
+    });
+
+    productsCart = [...updatedProduct];
+  } else {
+    productsCart = [...productsCart, newProduct];
+  }
 }
 
 const cartTable = document.querySelector('#cart-table tbody');
+
 function chargeCart() {
   clearHtmlCart();
 
   for (const product of productsCart) {
-    const { cantidad,id, image, name, price } = product;
+    const { cantidad, id, image, name, price } = product;
     const row = document.createElement('tr');
     row.innerHTML = `
       <td class="image"> <img src="${image}"/> </td>
@@ -55,4 +68,7 @@ function clearHtmlCart() {
   while (cartTable.firstChild) {
     cartTable.removeChild(cartTable.firstChild);
   }
+}
+function updateProduct(product){
+  
 }

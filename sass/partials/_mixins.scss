@@ -16,3 +16,11 @@
     pointer-events: all;
     transform: translateY($y-pos);
 }
+@mixin banner($urlImage, $height:100vh) { 
+    position: relative;
+    background: url($urlImage);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: $height;
+}

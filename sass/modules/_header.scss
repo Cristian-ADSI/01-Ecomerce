@@ -9,15 +9,10 @@
 
 header {
     margin-bottom: 50px;  
-    .banner {
-        position: relative;
+    .home {
 
-        background: url("../../assets/img/banner-header.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        height: 100vh;
+        $urlImage: "../../assets/img/banner-header.webp";
+       @include banner($urlImage);
 
         .content {
             position: absolute;

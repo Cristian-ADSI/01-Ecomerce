@@ -1,0 +1,23 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+@import "../partials/extends";
+
+.deal-week {
+    $urlImage: "../../assets/img/banner-counter.webp";
+    @include banner($urlImage, 90vh);
+    @include d-flex(center, flex-end);
+
+    .content {
+        height: 100%;
+        width: 50%;
+        flex-direction: column;
+        @include d-flex(center, center);
+
+        .title {
+            @extend %sectionTitle;
+        }
+        .buy-deal{
+            
+        }
+    }
+}

@@ -1,8 +1,26 @@
+@import "../partials/fonts";
+@import "../partials/variables";
 %Poppins {
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 %OpenSans {
-    font-family: "Open Sans",sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
+%sectionTitle {
+    color: $txtCol;
+    font-weight: 500;
+    font-size: 45px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: capitalize;
+    &:after {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 80px;
 
-
+        background-color: $red-l;
+        margin: 15px auto;
+    }
+}

@@ -1,15 +1,20 @@
 const btnEmptyCart = document.getElementById('empty-cart');
-const btnRemoveProduct = document.getElementById('remove-product');
-
 const cart = document.getElementById('cart');
-
 const arrivalsProducts = document.getElementById('arrivals-products');
+let productsCart = [];
+
 loadEventListeners();
 function loadEventListeners() {
   arrivalsProducts.addEventListener('click', addProduct);
+  cart.addEventListener('click', removeProduct);
+
+  btnEmptyCart.addEventListener('click', (e) => {
+    e.preventDefault();
+    productsCart = [];
+    clearCart();
+  });
 }
 
-let productsCart = [];
 function addProduct(e) {
   e.preventDefault();
 
@@ -21,54 +26,73 @@ function addProduct(e) {
 }
 
 function getNewProduct(element) {
-
   const newProduct = {
-    brand:  element.querySelector('.brand').textContent,
+    brand: element.querySelector('.brand').textContent,
     cantidad: 1,
-    id:     element.id,
-    image:  element.querySelector('img').src,
-    name:   element.querySelector('.name').textContent,
-    price:  element.querySelector('.current').textContent,
+    id: element.id,
+    image: element.querySelector('img').src,
+    name: element.querySelector('.name').textContent,
+    price: element.querySelector('.current').textContent,
   };
-
   const exists = productsCart.some((product) => product.id === newProduct.id);
 
   if (exists) {
-    const updatedProduct = productsCart.map((product) => {
-      if (product.id === newProduct.id) { product.cantidad++; return product;}
-      if (product.id !== newProduct.id) { return product;}
-    });
-
-    productsCart = [...updatedProduct];
+    updateProduct(newProduct);
   } else {
     productsCart = [...productsCart, newProduct];
   }
 }
 
+function updateProduct(newProduct) {
+  const updatedProduct = productsCart.map((product) => {
+    if (product.id === newProduct.id) {
+      product.cantidad++;
+      return product;
+    }
+    if (product.id !== newProduct.id) {
+      return product;
+    }
+  });
+
+  productsCart = [...updatedProduct];
+}
+
 const cartTable = document.querySelector('#cart-table tbody');
-
 function chargeCart() {
-  clearHtmlCart();
-
+  clearCart();
   for (const product of productsCart) {
-    const { cantidad, id, image, name, price } = product;
-    const row = document.createElement('tr');
-    row.innerHTML = `
-      <td class="image"> <img src="${image}"/> </td>
-      <td class="name" > ${name}</td>
-      <td class="price"> ${price}</td>
-      <td class="count"> ${cantidad} </td>
-      <td class="remove"> <a href="#" data-id="${id}" >X</a> </td>
-    `;
-    cartTable.appendChild(row);
+    const productItem = createProductItem(product);
+    cartTable.appendChild(productItem);
   }
 }
 
-function clearHtmlCart() {
+function clearCart() {
   while (cartTable.firstChild) {
     cartTable.removeChild(cartTable.firstChild);
   }
 }
-function updateProduct(product){
-  
+function createProductItem(product) {
+  const { cantidad, id, image, name, price } = product;
+  const row = document.createElement('tr');
+
+  row.innerHTML = `
+      <td class="image"> <img src="${image}"/> </td>
+      <td class="name" > ${name}</td>
+      <td class="price"> ${price}</td>
+      <td class="count"> ${cantidad} </td>
+      <td class="remove">
+       <a class="remove-product"  href="#" data-id="${id}">X</a> 
+      </td>
+    `;
+
+  return row;
+}
+
+function removeProduct(e) {
+  e.preventDefault();
+  if (e.target.classList.contains('remove-product')) {
+    const productId = e.target.getAttribute('data-id');
+    productsCart = productsCart.filter((product) => product.id !== productId);
+    chargeCart();
+  }
 }

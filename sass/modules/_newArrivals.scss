@@ -7,20 +7,7 @@
     margin: 80px 0;
     width: 100%;
     .title {
-        color: $txtCol;
-        font-weight: 500;
-        font-size: 45px;
-        text-align: center;
-        @extend %Poppins;
-        &:after {
-            content: "";
-            display: block;
-            height: 4px;
-            width: 7%;
-
-            background-color: $red-l;
-            margin: 15px auto;
-        }
+       @extend %sectionTitle; 
     }
     .tab-menu {
         display: flex;

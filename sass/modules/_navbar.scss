@@ -57,7 +57,7 @@
                 }
                 span {
                     display: inline-block;
-                    background-color: $bodyBg-Dark;
+                    background-color: $bodyBgDark;  
                     border-radius: 0 5px 5px 0;
                     color: $white;
                     padding: 3px 8px;
@@ -148,7 +148,7 @@
                                         color: $white;
                                         line-height: 20px;
                                         width: 20px;
-                                        height: 20px; 
+                                        height: 20px;
                                         font-weight: 500;
                                         font-size: 14px;
                                     }
@@ -157,19 +157,10 @@
                         }
                     }
                     button {
-                        border: none;
-                        background-color: $red-l;
-                        color: $white;
-                        cursor: pointer;
                         font-size: 14px;
-                        font-weight: 600;
+                        font-weight: 500;
                         height: 40px;
-                        transition: all ease-in-out 0.2s;
-                        @extend %OpenSans;
-
-                        &:hover {
-                            background-color: $red;
-                        }
+                        @include buttonAction($white, $red-l, $red, 0);
                     }
                 }
             }

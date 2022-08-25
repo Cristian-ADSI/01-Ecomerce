@@ -3,16 +3,13 @@
 
 @import "../partials/variables";
 @import "../partials/mixins";
-@import "../partials/extends"; 
-
-
+@import "../partials/extends";
 
 header {
-    margin-bottom: 50px;  
+    margin-bottom: 50px;
     .home {
-
         $urlImage: "../../assets/img/banner-header.webp";
-       @include banner($urlImage);
+        @include banner($urlImage);
 
         .content {
             position: absolute;
@@ -37,21 +34,9 @@ header {
                 margin-bottom: 30px;
             }
             button {
-                border: none;
-                background-color: $red-l;
-                &:hover {
-                    a {
-                        background-color: $red;
-                    }
-                }
-                a {
-                    display: block;
-                    color: $white;
-                    font-size: 16px;
-                    padding: 10px 25px;
-                    @extend %Poppins;
-                    transition: all ease-in-out 0.2s;
-                }
+                font-size: 16px;
+                padding: 10px 25px; 
+                @include buttonAction($white,$red-l,$red);
             }
         }
     }

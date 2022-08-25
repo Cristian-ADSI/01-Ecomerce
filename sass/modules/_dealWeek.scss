@@ -14,10 +14,15 @@
         @include d-flex(center, center);
 
         .title {
+            margin: 10px 0;
             @extend %sectionTitle;
         }
-        .buy-deal{
-            
+        .buy-deal {
+            font-size: 16px;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            margin: 10px 0;
+            @include buttonAction($white, $bodyBgDark-l, $bodyBgDark);
         }
     }
 }

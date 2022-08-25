@@ -1,3 +1,6 @@
+@import "../partials/fonts";
+@import "../partials/variables";
+
 @mixin d-flex($align: center, $justify: center) {
     display: flex;
     align-items: $align;
@@ -16,11 +19,30 @@
     pointer-events: all;
     transform: translateY($y-pos);
 }
-@mixin banner($urlImage, $height:100vh) { 
+
+@mixin banner($urlImage, $height: 100vh) {
     position: relative;
     background: url($urlImage);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: $height;
+}
+
+@mixin buttonAction($color, $bgColor, $bgHover, $radius: 3px) {
+    display: block;
+    border: none;
+    border-radius: $radius;
+    background-color: $bgColor;
+    transition: all ease-in-out 0.2s;
+    color: $color;
+    &:hover {
+        background-color: $bgHover;
+    }
+    a {
+        color: $color;
+        display: block;
+        transition: all ease-in-out 0.2s;
+        @extend %Poppins;
+    }
 }

@@ -29,7 +29,7 @@
     height: $height;
 }
 
-@mixin buttonAction($color, $bgColor, $bgHover, $radius: 3px) {
+@mixin buttonAction($color, $bgColor, $bgHover, $radius: 0) {
     display: block;
     border: none;
     border-radius: $radius;

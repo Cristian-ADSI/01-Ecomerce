@@ -20,7 +20,7 @@
     transform: translateY($y-pos);
 }
 
-@mixin banner($urlImage, $height: 100vh) {
+@mixin banner($urlImage: "", $height: 100vh) {
     position: relative;
     background: url($urlImage);
     background-size: cover;

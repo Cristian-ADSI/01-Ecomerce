@@ -4,9 +4,63 @@
 
 .deal-week {
     $urlImage: "../../assets/img/banner-counter.webp";
-    @include banner($urlImage, 80vh);
+    @include banner(null, 80vh);
     @include d-flex(center, flex-end);
 
+    #deal {
+        position: relative;
+        height: 100%;
+        width: 50%;
+
+        &:hover {
+            #d-week-product {
+                transform: translate(-5%, -62%) scale(1.3);
+            }
+            .deal-info {
+                #deal-brand {
+                    transform: translateX(0);
+                }
+                #deal-product-name {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        #d-week-product {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .deal-info {
+            position: absolute;
+            top: 12%;
+            left: 0;
+
+            overflow: hidden;
+            width: 50%;
+            height: 120px;
+            @include d-flex(flex-end, center);
+            flex-direction: column;
+            #deal-brand {
+                margin-bottom: 5px;
+                width: 85%;
+                transition: all ease-in-out 0.3s;
+                transform: translateX(101%);
+            }
+            #deal-product-name {
+                color: $txtCol-70;
+                font-size: 16px;
+                margin-right: 5%;
+                transition: all ease-in-out 0.3s;
+                transform: translateX(110%);
+                @extend %Poppins;
+            }
+        }
+    }
     .content {
         height: 100%;
         width: 50%;
@@ -17,7 +71,6 @@
             margin: 10px 0;
             @extend %sectionTitle;
         }
-
         .counter {
             gap: 20px;
             margin: 50px 0;
@@ -29,20 +82,20 @@
             .seconds-content {
                 @include d-flex();
                 flex-direction: column;
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
                 border-radius: 55%;
                 background-color: $white-40;
                 span {
                     color: $red-l;
                     line-height: 50px;
-                    font-size: 50px;
+                    font-size: 45px;
                     font-weight: 600;
                     @extend %Poppins;
                 }
                 .text {
                     color: $txtCol-70;
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 600;
                     text-transform: capitalize;
                     @extend %Poppins;

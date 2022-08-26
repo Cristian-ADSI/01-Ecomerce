@@ -1,7 +1,7 @@
-// const spanMinutes = document.getElementById('minutes');
-// const spanSeconds = document.getElementById('seconds');
-// const spanHours = document.getElementById('hours');
-// const spanDays = document.getElementById('days');
+const spanMinutes = document.getElementById('minutes');
+const spanSeconds = document.getElementById('seconds');
+const spanHours = document.getElementById('hours');
+const spanDays = document.getElementById('days');
 
 // let seconds = 0;
 // let minutes = 0;

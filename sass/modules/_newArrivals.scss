@@ -50,13 +50,19 @@
             width: 20%;
             border-right: solid 1px $gray-l;
             background-color: $white;
-            transition: all ease-in-out 0.2s;
+            transition: all ease-out .2s;
             &:hover {
                 box-shadow: rgba(82, 82, 82, 0.1) 0 0 20px 1px;
                 z-index: 10;
                 .add-product {
                     background-color: $red-l;
                 }
+            }
+            &.inactive{
+                transform: scale(0);
+                position: absolute;
+                transition: all ease-in 0s;
+
             }
             img {
                 margin-bottom: 20px;

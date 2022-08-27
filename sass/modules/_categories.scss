@@ -1,42 +1,54 @@
 @import "../partials/variables";
-@import "../partials/mixins"; 
-@import "../partials/extends"; 
+@import "../partials/mixins";
+@import "../partials/extends";
 
 .categories {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 80px 0;
+    width: 100%;
     padding: 0 $desktop-padding;
-    margin-bottom: 50px;
-    &__card {
-        position: relative;
-        display: block;
-        width: 32%;
-        overflow: hidden;
+    &_title {
+        @extend %sectionTitle;
+    }
+    &_content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        width: 100%;
 
-        img {
+        &_card {
             position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 100%;
-        }
+            overflow: hidden;
+            &:hover {
+                img {
+                    filter: brightness(0.6);
+                }
+                p {
+                    color: $red-l;
+                }
+            }
+            img {
+                transition: all ease-in-out .2s;
+                display: block; 
+            }
 
-        p {
-            position: absolute;
-            top: 50%;
-            left: 50%;
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
 
-            color: $txtCol;
-            background-color: $white;
-            @extend %Poppins;
-            font-size: 22px;
-            font-weight: 600;
-            padding: 5px 10px;
-            transform: translate(-50%, -50%);
-            transition: all ease-in-out .2s;
-            &:hover{
-            color: $txtCol-70;
-
+                color: $txtCol;
+                background-color: $white;
+                @extend %Poppins;
+                font-size: 22px;
+                font-weight: 600;
+                padding: 5px 10px;
+                text-transform: uppercase;
+                transform: translate(-50%, -50%);
+                transition: all ease-in-out 0.2s;
+                &:hover {
+                    color: $red-l;
+                }
             }
         }
     }

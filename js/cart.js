@@ -37,6 +37,7 @@ function getNewProduct(element) {
     name: element.querySelector('.name').textContent,
     price: element.querySelector('.current').textContent,
   };
+  
   const exists = productsCart.some((product) => product.id === newProduct.id);
 
   if (exists) {

@@ -84,9 +84,9 @@
             <ul class="menu">
               <li><a href="/">HOME</a></li>
               <li><a href="/">SHOP</a></li>
-              <li><a href="/">PROMOTION</a></li>
-              <li><a href="/">PAGES</a></li>
-              <li><a href="/">BLOG</a></li>
+              <li><a href="/">SALES</a></li>
+              <li><a href="/">CATEGORIES</a></li>
+              <li><a href="/">ABOUT</a></li>
               <li><a href="/">CONTACT</a></li>
             </ul>
 
@@ -138,20 +138,36 @@
     <main class="ecomerce">
       <!-- Categories  -->
       <section class="categories">
-        <a href="/" class="categories__card">
-          <img src="./assets/img/womens.webp" alt="Women Category" />
-          <p>WOMENS'S</p>
-        </a>
 
-        <a href="/" class="categories__card">
-          <img src="./assets/img/accessories.webp" alt="Accessories Category" />
-          <p>ACCESSORIES</p>
-        </a>
+        <h2 class="categories_title">What are you looking for?</h2>
 
-        <a href="/" class="categories__card">
-          <img src="./assets/img/mens.webp" alt="Men Category" />
-          <p>MENS'S</p>
-        </a>
+        <article class="categories_content">
+          <!-- Womens  -->
+          <a href="/"  class="categories_content_card">
+            <picture>
+               <source  srcset="" /> <!--TODO: Establecer imagen para movil  -->
+              <img src="./assets/img/catg-womens.webp" alt="Women Category" width="100%" />
+            </picture>
+            <p>women's</p>
+          </a>
+          <!-- Mens   -->
+          <a href="/" class="categories_content_card">
+            <picture>
+              <source  srcset="" /> <!--TODO: Establecer imagen para movil  -->
+             <img src="./assets/img/catg-mens.webp" alt="Men Category" width="100%" />
+            </picture>
+            <p>mens's</p>
+          </a>
+          <!-- Accessories  -->
+          <a href="/" class="categories_content_card">
+            <picture>
+              <source  srcset="" /> <!--TODO: Establecer imagen para movil  -->
+             <img src="./assets/img/catg-accessories.webp" alt="Men Category" width="100%" />
+            </picture>
+            <p>accessory's</p>
+          </a>
+        </article>
+        
       </section>
       <!-- New Arrivals  -->
       <section class="arrivals">
@@ -169,8 +185,8 @@
       <section id="d-week-section" class="deal-week">
         <div id="deal">
           <div class="deal-info">
-            <img id="deal-brand" src="" alt="">
-            <p id="deal-product-name"></p> 
+            <img id="deal-brand" src="" alt="" />
+            <p id="deal-product-name"></p>
           </div>
           <img src="" alt="Product of Week" id="d-week-product" />
         </div>

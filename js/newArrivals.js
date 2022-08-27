@@ -157,7 +157,7 @@
       product: { price, discount, sale, reference },
     } = product;
 
-    card.className = `product ${category}`;
+    card.className = `product active ${category}`;
     card.id = `${reference}`;
 
     card.innerHTML = `
@@ -228,15 +228,19 @@
       const isInactive = product.classList.contains('inactive');
       // TODO: se ocultan los que no son de la categoria
       if (!isCategory && !isInactive && newCategory) {
+        product.classList.remove('active');
         product.classList.add('inactive');
       }
 
       if (isCategory && isInactive) {
         product.classList.remove('inactive');
+        product.classList.add('active');
+
       }
 
       if (!newCategory && isInactive) {
         product.classList.remove('inactive');
+        product.classList.add('active')
       }
     }
     

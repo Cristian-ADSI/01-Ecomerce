@@ -3,6 +3,7 @@
 @import "../partials/extends";
 
 .deal-week {
+    height: auto;
     $urlImage: "../../assets/img/banner-counter.webp";
     @include banner(null, 80vh);
     @include d-flex(center, flex-end);

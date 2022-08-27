@@ -45,12 +45,29 @@
         margin-top: 50px;
         @include d-flex(center, flex-start);
         flex-wrap: wrap;
+        @keyframes hideProduct {
+            0% {
+                position: relative;
+            }
+            100% {
+                position: absolute;
+            }
+        }
+        @keyframes showProduct {
+            0% {
+                position: absolute;
+            }
+            100% {
+                position: relative;
+            }
+        }
         .product {
-            position: relative;
+            position: absolute;
             width: 20%;
             border-right: solid 1px $gray-l;
             background-color: $white;
-            transition: all ease-out .2s;
+            opacity: 0;
+
             &:hover {
                 box-shadow: rgba(82, 82, 82, 0.1) 0 0 20px 1px;
                 z-index: 10;
@@ -58,11 +75,29 @@
                     background-color: $red-l;
                 }
             }
-            &.inactive{
-                transform: scale(0);
-                position: absolute;
-                transition: all ease-in 0s;
 
+            &.active {
+                opacity: 1;
+                pointer-events: all;
+                transform: translateY(0px);
+                transition: all ease-in 0.2s;
+                transition-delay: 0.2s;
+             
+                animation-name: showProduct;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                
+            }
+            &.inactive {
+                opacity: 0;
+                pointer-events: none;
+                transition: all ease-out 0.2s;
+                transform: translateY(50px);
+
+                animation-name: hideProduct;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                
             }
             img {
                 margin-bottom: 20px;

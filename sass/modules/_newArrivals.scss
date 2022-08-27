@@ -62,11 +62,12 @@
             }
         }
         .product {
-            position: absolute;
-            width: 20%;
             border-right: solid 1px $gray-l;
             background-color: $white;
+            margin-bottom: 30px;
             opacity: 0;
+            position: absolute;
+            width: 20%;
 
             &:hover {
                 box-shadow: rgba(82, 82, 82, 0.1) 0 0 20px 1px;
@@ -84,7 +85,7 @@
                 transition-delay: 0.2s;
              
                 animation-name: showProduct;
-                animation-duration: .7s;
+                animation-duration: .6s;
                 animation-fill-mode: forwards;
                 
             }
@@ -95,7 +96,7 @@
                 transform: translateY(50px);
 
                 animation-name: hideProduct;
-                animation-duration: .7s;
+                animation-duration: .6s;
                 animation-fill-mode: forwards;
                 
             }

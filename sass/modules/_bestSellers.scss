@@ -10,8 +10,9 @@
         @extend %sectionTitle;
     }
     #bestSellers_carousel {
+        margin: 80px 0; 
         .product {
-            @include productCard(25%);
+            @include productCard(25%,$txtCol-30);
         }
     }
 }

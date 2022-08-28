@@ -43,7 +43,7 @@
 
     &-products {
         flex-wrap: wrap;
-        margin-top: 50px;
+        margin: 50px 0;
         @include d-flex(center, flex-start);
 
         .product {

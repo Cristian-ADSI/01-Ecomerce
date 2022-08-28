@@ -6,13 +6,28 @@
     padding: 0 $desktop-padding;
     margin: 80px 0;
     width: 100%;
+
     .title {
         @extend %sectionTitle;
     }
     #bestSellers_carousel {
-        margin: 80px 0; 
+        position: relative;
+        margin: 80px 0;
         .product {
-            @include productCard(25%,$txtCol-30);
+            height: 100%;
+            margin: 0 1%;
+            @include productCard(23%, $txtCol-30);
+            margin-bottom: 0;
+        }
+        .next-btn {
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(100%,-50%);
+            background-color: $txtCol-30;
+            margin-bottom: 30px;
         }
     }
 }

@@ -47,7 +47,7 @@
     }
 }
 
-@mixin productCard($width: 20%,$backgroundBtn:$white) {
+@mixin productCard($width: 20%, $backgroundBtn: $white) {
     border-right: solid 1px $gray-l;
     background-color: $white;
     margin-bottom: 30px;
@@ -107,6 +107,7 @@
         width: 100%;
     }
     .name {
+        height: 45px;
         color: $txtCol;
         font-weight: 600;
         padding: 0 20px;

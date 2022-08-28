@@ -44,10 +44,12 @@
     &-products {
         flex-wrap: wrap;
         margin: 50px 0;
+        
         @include d-flex(center, flex-start);
 
         .product {
-            @include productCard();
+            margin: 0 .5%; 
+            @include productCard(19%,$txtCol-30);
         }
     }
 }

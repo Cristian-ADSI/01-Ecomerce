@@ -1,6 +1,6 @@
 (function () {
   const xhttp = new XMLHttpRequest();
-  xhttp.open('GET', './mocks/new-arrivals.json', true);
+  xhttp.open('GET', './mocks/new-arrivals.json');
   xhttp.send();
 
   xhttp.onreadystatechange = function () {
@@ -20,6 +20,12 @@
     }
 
     newArrivals.appendChild(arrivalsFragment);
+
+    const arrivalsProducts = document.querySelectorAll(
+      '#arrivals-products .product'
+    );
+    // console.log(arrivalsProducts);
+    loadEventListeners(arrivalsProducts);
   }
 
   function cardTemplate(product, card) {
@@ -43,8 +49,8 @@
           <span class="current">
             $${price - discount - (price * sale) / 100}.00
           </span>
-          ${!discount ? '' : '<span class="discount">' + price + ' 00 </span>'}
-          ${!sale ? '' : '<span class="sale">' + price + ' 00 </span>'}
+          ${!discount ? '' : '<span class="discount">' + price + '.00 </span>'}
+          ${!sale ? '' : '<span class="sale">' + price + ' 00 </span>'} 
       </div>
       ${!sale ? '' : '<span class="label">SALE -' + sale + '%</span>'}
       <button class="add-product">ADD TO BAG</button>
@@ -53,44 +59,40 @@
     return card;
   }
 
-  // Selecting Category block
   const womenTab = document.getElementById('women-tab');
   const menTab = document.getElementById('men-tab');
   const accessoriesTab = document.getElementById('accessories-tab');
   const allTab = document.getElementById('all-tab');
-  const arrivalsProducts = document.querySelectorAll(
-    '#arrivals-products .product'
-  );
 
   let newCategory = '';
   let activeTab = allTab;
 
-  function loadEventListeners() {
+  function loadEventListeners(products) {
     allTab.addEventListener('click', () => {
       newCategory = null;
-      setCategory(newCategory, allTab);
+      setCategory(newCategory, allTab, products)
     });
 
     womenTab.addEventListener('click', () => {
       newCategory = 'women';
-      setCategory(newCategory, womenTab);
+      setCategory(newCategory, womenTab, products);
     });
 
     menTab.addEventListener('click', () => {
       newCategory = 'men';
-      setCategory(newCategory, menTab);
+      setCategory(newCategory, menTab,products);
     });
 
     accessoriesTab.addEventListener('click', () => {
       newCategory = 'accessory';
-      setCategory(newCategory, accessoriesTab);
+      setCategory(newCategory, accessoriesTab,products);
     });
   }
 
-  function setCategory(newCategory, newTab) {
+  function setCategory(newCategory, newTab, products) {
     activeTab.classList.remove('active');
 
-    for (const product of arrivalsProducts) {
+    for (const product of products) {
       const isCategory = product.classList.contains(newCategory);
       const isInactive = product.classList.contains('inactive');
       // TODO: se ocultan los que no son de la categoria
@@ -114,6 +116,5 @@
     activeTab = newTab;
   }
 
-  loadEventListeners();
   activeTab.classList.add('active');
 })();

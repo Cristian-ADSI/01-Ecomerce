@@ -17,7 +17,23 @@
       const productCard = cardTemplate(product, card);
       bestSellersFragment.appendChild(productCard);
     }
+
     carousel.appendChild(bestSellersFragment);
+    //Set  Carrousel
+    $(document).ready(function () {
+      $('#bestSellers_carousel').slick({
+        Infinity: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow:
+          '<span class="material-symbols-outlined prev-btn">arrow_back_ios</span>',
+        nextArrow:
+          '<span class="material-symbols-outlined next-btn">arrow_forward_ios</span>',
+      });
+    });
   }
 
   function cardTemplate(product, card) {
@@ -52,13 +68,4 @@
       `;
     return card;
   }
-
-  // Carrousel 
-  $(document).ready(function () {
-    $('#bestSellers_carousel').slick({
-      Infinity: true,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-    });
-  });
 })();

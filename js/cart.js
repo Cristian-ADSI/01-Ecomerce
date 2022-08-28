@@ -1,4 +1,5 @@
 const arrivalsProducts = document.getElementById('arrivals-products');
+const bestSellersProducts = document.getElementById('bestSellers_carousel');
 const btnEmptyCart = document.getElementById('empty-cart');
 const cart = document.getElementById('cart');
 const cartItems = document.getElementById('cart-items');
@@ -8,6 +9,8 @@ let productsCart = [];
 loadEventListeners();
 function loadEventListeners() {
   arrivalsProducts.addEventListener('click', addProduct);
+  bestSellersProducts .addEventListener('click', addProduct);
+
   cart.addEventListener('click', removeProduct);
 
   btnEmptyCart.addEventListener('click', (e) => {

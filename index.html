@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles  -->
     <link rel="stylesheet" href="./css/ecomerce.css" />
     <!-- Googlo icons  -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <!-- Slick Carousel  -->
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+
     <title>Ecomerce Site</title>
   </head>
 
@@ -137,37 +140,50 @@
 
     <main class="ecomerce">
       <!-- Categories  -->
-      <section class="categories">
-
+      <section class="categories">   
         <h2 class="categories_title">What are you looking for?</h2>
 
         <article class="categories_content">
           <!-- Womens  -->
-          <a href="/"  class="categories_content_card">
+          <a href="/" class="categories_content_card">
             <picture>
-               <source  srcset="" /> <!--TODO: Establecer imagen para movil  -->
-              <img src="./assets/img/catg-womens.webp" alt="Women Category" width="100%" />
+              <source srcset="" />
+              <!--TODO: Establecer imagen para movil  -->
+              <img
+                src="./assets/img/catg-womens.webp"
+                alt="Women Category"
+                width="100%"
+              />
             </picture>
             <p>women's</p>
           </a>
           <!-- Mens   -->
           <a href="/" class="categories_content_card">
             <picture>
-              <source  srcset="" /> <!--TODO: Establecer imagen para movil  -->
-             <img src="./assets/img/catg-mens.webp" alt="Men Category" width="100%" />
+              <source srcset="" />
+              <!--TODO: Establecer imagen para movil  -->
+              <img
+                src="./assets/img/catg-mens.webp"
+                alt="Men Category"
+                width="100%"
+              />
             </picture>
             <p>men's</p>
           </a>
           <!-- Accessories  -->
           <a href="/" class="categories_content_card">
             <picture>
-              <source  srcset="" /> <!--TODO: Establecer imagen para movil  -->
-             <img src="./assets/img/catg-accessories.webp" alt="Men Category" width="100%" />
+              <source srcset="" />
+              <!--TODO: Establecer imagen para movil  -->
+              <img
+                src="./assets/img/catg-accessories.webp"
+                alt="Men Category"
+                width="100%"
+              />
             </picture>
             <p>accessory's</p>
           </a>
         </article>
-        
       </section>
       <!-- New Arrivals  -->
       <section class="arrivals">
@@ -179,17 +195,18 @@
           <li id="accessories-tab" class="">ACCESSORIES</li>
         </ul>
 
-        <div id="arrivals-products" class="arrivals-products"></div>
+        <articcle id="arrivals-products" class="arrivals-products"><articcle >
       </section>
       <!-- Deal of the week -->
       <section id="d-week-section" class="deal-week">
-        <div id="deal">
-          <div class="deal-info">
+        <aside id="deal">
+          <article class="deal-info">
             <img id="deal-brand" src="" alt="" />
             <p id="deal-product-name"></p>
-          </div>
+          </article>
           <img src="" alt="Product of Week" id="d-week-product" />
-        </div>
+        </aside>  
+
         <div class="content">
           <h2 class="title">Deal of the week</h2>
           <div class="counter">
@@ -216,10 +233,16 @@
           <button class="buy-deal"><a href="#">buy now</a></button>
         </div>
       </section>
+      <!-- Best Sellers -->
+      <section class="best-sellers">
+        <h2 class="title">Best Sellers</h2>
+        <article id="bestSellers_carousel"></article>
+      </section>
     </main>
     <script src="./js/cart.js"></script>
     <script src="./js/newArrivals.js"></script>
     <script src="./js/counter.js"></script>
     <script src="./js/assetsSource.js"></script>
+    <script src="./js/bestSelleres.js"></script>
   </body>
 </html>

@@ -145,6 +145,7 @@
   const newArrivals = document.getElementById('arrivals-products');
   const fragment = document.createDocumentFragment();
 
+ 
   for (const product of products) {
     const card = document.createElement('div');
 
@@ -235,15 +236,14 @@
       if (isCategory && isInactive) {
         product.classList.remove('inactive');
         product.classList.add('active');
-
       }
 
       if (!newCategory && isInactive) {
         product.classList.remove('inactive');
-        product.classList.add('active')
+        product.classList.add('active');
       }
     }
-    
+
     newTab.classList.add('active');
     activeTab = newTab;
   }

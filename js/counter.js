@@ -80,9 +80,9 @@ const spanDays = document.getElementById('days');
 // loadSeconds();
 // const timer = setInterval(loadSeconds, 1000);
 
-const limitDate = new Date('28 aug 2022');
+const limitDate = new Date('30 aug 2022');
 
-function countTime() {
+function counter() {
   const currentDate = new Date();
   const totalSeconds = (limitDate - currentDate) / 1000;
 
@@ -97,6 +97,12 @@ function countTime() {
   spanSeconds.textContent = `${leftSeconds}`;
 }
 
-countTime();
+setInterval(setCounter, 1000);
 
-setInterval(countTime,1000)
+function setCounter() {
+  const currentDate = new Date();
+
+  if (limitDate > currentDate) {
+    counter();
+  }
+}

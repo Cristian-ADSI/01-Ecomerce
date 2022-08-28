@@ -1,0 +1,44 @@
+[
+    {
+        "category": "men",
+        "color": "",
+        "brand": "Block Buster",
+        "image": "./assets/products/best_sellers/men-jacket-RFMJCK01.webp",
+        "name": "Leather Jacket Urban",
+        "size": "L",
+        "product": {
+            "discount": 0,
+            "price": 500,
+            "reference": "RFMJCK01",
+            "sale": 0
+        }
+    },
+    {
+        "category": "men",
+        "color": "",
+        "brand": "Levis",
+        "image": "./assets/products/best_sellers/men-jacket-RFMJCK02.webp",
+        "name": "Women's Jersey",
+        "size": "L",
+        "product": {
+            "discount": 0,
+            "price": 610,
+            "reference": "RFWJ002",
+            "sale": 0
+        }
+    },
+    {
+        "category": "men",
+        "color": "",
+        "brand": "Ecko UNLTD",
+        "image": "../assets/products/best_sellers/men-tshirt-RFMTSH01.webp",
+        "name": "Men's Hoddie",
+        "size": "L",
+        "product": {
+            "discount": 50,
+            "price": 590,
+            "reference": "RFMH001",
+            "sale": 0
+        }
+    }
+]

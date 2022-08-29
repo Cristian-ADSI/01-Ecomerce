@@ -1,0 +1,169 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+@import "../partials/extends";
+
+.navbar {
+    position: relative;
+    @include d-flex(center, space-between);
+
+    background-color: $white;
+    padding: 0 $desktop-padding;
+    height: 90px;
+    width: 100%;
+    z-index: 5;
+    .brand {
+        a {
+            color: $txtCol;
+            @extend %Poppins;
+            font-size: 25px;
+            font-weight: 500;
+            span {
+                color: $red;
+                font-weight: 900;
+            }
+        }
+    }
+
+    .content {
+        height: 100%;
+        @include d-flex();
+        gap: 20px;
+        .menu {
+            @include d-flex();
+            gap: 15px;
+            li {
+                a {
+                    color: $txtCol;
+                    font-size: 14px;
+                    transition: all ease-in-out 0.1s;
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+        .tools {
+            @include d-flex();
+            gap: 20px;
+            .search {
+                @include d-flex();
+                height: 100%;
+                input {
+                    border: none;
+                    outline: none;
+                    height: 30px;
+                    text-align: center;
+                    font-size: 16px;
+                }
+                span {
+                    display: inline-block;
+                    background-color: $bodyBgDark;  
+                    border-radius: 0 5px 5px 0;
+                    color: $white;
+                    padding: 3px 8px;
+                    line-height: 30px;
+                }
+            }
+            .cart {
+                position: relative;
+                &:hover {
+                    .cart__list {
+                        @include menu-animate-in(100%);
+                    }
+                }
+                span {
+                    color: $txtCol-70;
+                    cursor: pointer;
+                    font-size: 40px;
+                }
+                .items {
+                    position: absolute;
+                    top: -10px;
+                    right: -15px;
+                    height: 25px;
+                    width: 25px;
+
+                    color: $white;
+                    font-size: 14px;
+                    line-height: 25px;
+                    text-align: center;
+
+                    background-color: $red;
+                    clip-path: circle();
+                }
+                &__list {
+                    position: absolute;
+                    bottom: 0px;
+                    right: -20px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    min-height: 150px;
+                    width: 280px;
+
+                    background-color: $white;
+                    @include menu-animate-out(113%);
+
+                    &-items {
+                        color: $txtCol-70;
+                        display: flex;
+                        height: calc(100% - 40px);
+                        justify-content: center;
+                        padding-top: 20px;
+
+                        table {
+                            width: 100%;
+                            th {
+                                text-transform: capitalize;
+                                font-size: 12px;
+                            }
+
+                            td {
+                                text-align: center;
+                                &.image {
+                                    width: 50px;
+                                    img {
+                                        width: 50px;
+                                    }
+                                }
+                                &.name {
+                                    width: 60px;
+                                    font-size: 12px;
+                                }
+                                &.price {
+                                    width: 65px;
+                                    font-size: 12px;
+                                }
+                                &.count {
+                                    width: 50px;
+                                    font-size: 12px;
+                                }
+                                &.remove {
+                                    width: 50px;
+                                    a {
+                                        display: block;
+                                        background-color: $red-l;
+                                        clip-path: circle();
+                                        color: $white;
+                                        line-height: 20px;
+                                        width: 20px;
+                                        height: 20px;
+                                        font-weight: 500;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    button {
+                        font-size: 14px;
+                        font-weight: 500;
+                        height: 40px;
+                        @include buttonAction($white, $red-l, $red, 0);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+@import "../partials/extends";
+.brands {
+    margin: 80px 0;
+    width: 100%;
+    padding: 0 $desktop-padding;
+    &__title {
+        @extend %sectionTitle;
+    }
+    &__desc {
+        color: $txtCol-70;
+        display: block;
+        font-size: 18px;
+        margin: 0 auto;
+        width: 70%;
+        text-align: center;
+    }
+    &__logo {
+        margin: 50px 0;
+        @include d-flex(center, space-between); 
+        span {
+            font-size: calc(100% * 8);
+            color: $txtCol-70;
+            transition: all ease-in-out 0.2s;
+
+            &.ico-dolce-dg:hover {
+                color: $txtCol;
+            }
+            &.ico-nike:hover {
+                color: $orange;
+            }
+            &.ico-moschino:hover {
+                color: $txtCol;
+            }
+            &.ico-adidas:hover {
+                color: $blue;
+            }
+            &.ico-levis:hover {
+                color: $red;
+            }
+        }
+    }
+}

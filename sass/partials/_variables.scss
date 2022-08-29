@@ -1,15 +1,29 @@
-$bodyBg: #e0e0e0;
-$txtCol: #212121;
+$bodyBg: #ffffff; 
+$bodyBgDark:  #000020; 
+$bodyBgDark-l:#05053f;
 
-$bodyBg-Dark: #000033;
-$txtCol-Dark: #9fa8da;
+$txtCol: #212121;
+$txtCol-Dark: #d4caec;
 
 $txtCol-70: rgba(33, 33, 33, 0.7);
 $txtCol-50: rgba(33, 33, 33, 0.5);
+$txtCol-30: rgba(33, 33, 33, 0.3); 
 
-$yellow: #ffc300;
-$red: #ff0033;
-$gree: #00cc33;
-$orange: #ff5733;
-$magent: #c70039;
-$crimso: #900c3f;
+$blue: #1976D2;
+$crimso:#900c3f;
+$yellow:#ffc300;
+$gray:  #e3e3e3;
+$gree:  #00cc33;
+$magent:#c70039;
+$orange:#ff5733;
+$olive:  #7f810f;
+$red:   #ff0033;
+$white: #ffffff;
+
+$gray-l:#eeeeee;
+$red-l: #ff2b55;
+$red-d: #da002c;
+
+$white-40: rgba(255, 255, 255, 0.4);
+
+$desktop-padding: 8%;

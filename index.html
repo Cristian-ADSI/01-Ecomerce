@@ -1,18 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles  -->
+    <link rel="stylesheet" href="./css/ecomerce.css" />
+    <!-- icons  -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link href="https://file.myfontastic.com/J3PNojgD4gs8KkXHcUv4Jj/icons.css" rel="stylesheet">
+    <!-- Slick Carousel  -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/ecomerce.css">
-    <!-- Googlo icons  -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Ecomerce Site</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <header>
+      <!-- Topbar  -->
+      <nav>
+        <!-- Toolbar  -->
+        <div class="toolbar">
+          <p class="endorsement">FREE SHIPPING ON ALL U.S ORDERS OVER $50</p>
+          <div class="content">
+            <div class="menu_badge">
+              <p class="badge_value">
+                USD<span class="material-symbols-outlined">expand_more</span>
+              </p>
 
-</body>
+              <ul class="items">
+                <li class="CAD">CAD</li>
+                <li class="AUD">AUD</li>
+                <li class="EUR">EUR</li>
+                <li class="GBP">GBP</li>
+              </ul>
+            </div>
 
+            <div class="menu_lang">
+              <p class="lang_value">
+                English<span class="material-symbols-outlined"
+                  >expand_more</span
+                >
+              </p>
+
+              <ul class="items">
+                <li id="FRC">French</li>
+                <li id="ITL">Italian</li>
+                <li id="GRM">German</li>
+                <li id="SPN">Spanish</li>
+              </ul>
+            </div>
+
+            <div class="menu_acount">
+              <p class="acount_value">
+                My Acount<span class="material-symbols-outlined"
+                  >expand_more</span
+                >
+              </p>
+
+              <ul class="items">
+                <li id="sigIn">
+                  <a href="/">
+                    <span class="material-symbols-outlined"> login </span>
+                    <span> Sing In</span>
+                  </a>
+                </li>
+
+                <li id="singUp">
+                  <a href="/">
+                    <span class="material-symbols-outlined"> person_add </span>
+                    Register
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Navbar  -->
+        <div class="navbar">
+          <div class="brand">
+            <a href="/">COLOR<span>SHOP</span></a>
+          </div>
+
+          <div class="content">
+            <ul class="menu">
+              <li><a href="/">HOME</a></li>
+              <li><a href="/">SHOP</a></li>
+              <li><a href="/">SALES</a></li>
+              <li><a href="/">CATEGORIES</a></li>
+              <li><a href="/">ABOUT</a></li>
+              <li><a href="/">CONTACT</a></li>
+            </ul>
+
+            <div class="tools">
+              <div class="search">
+                <input type="text" placeholder="Search Products" />
+                <span class="material-symbols-outlined"> search </span>
+              </div>
+
+              <div id="cart" class="cart">
+                <span id="cart-items" class="items">0</span>
+                <span class="material-symbols-outlined"> local_mall </span>
+                <div class="cart__list">
+                  <div class="cart__list-items">
+                    <table id="cart-table">
+                      <thead>
+                        <tr>
+                          <th>Image</th>
+                          <th>name</th>
+                          <th>price</th>
+                          <th>count</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+                  <button id="empty-cart">EMPTY CART</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Banner -->
+      <section class="home">
+        <div class="content">
+          <p class="tags">SPRING / SUMMER COLLECTION 2017</p>
+
+          <h1 class="advertising">Get up to 30% Off New Arrivals</h1>
+
+          <button>
+            <a href="/">SHOP NOW</a>
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <main class="ecomerce">
+      <!-- Categories  -->
+      <section class="categories">   
+        <h2 class="categories_title">What are you looking for?</h2>
+
+        <article class="categories_content">
+          <!-- Womens  -->
+          <a href="/" class="categories_content_card">
+            <picture>
+              <source srcset="" />
+              <!--TODO: Establecer imagen para movil  -->
+              <img
+                src="./assets/img/catg-womens.webp"
+                alt="Women Category"
+                width="100%"
+              />
+            </picture>
+            <p>women's</p>
+          </a>
+          <!-- Mens   -->
+          <a href="/" class="categories_content_card">
+            <picture>
+              <source srcset="" />
+              <!--TODO: Establecer imagen para movil  -->
+              <img
+                src="./assets/img/catg-mens.webp"
+                alt="Men Category"
+                width="100%"
+              />
+            </picture>
+            <p>men's</p>
+          </a>
+          <!-- Accessories  -->
+          <a href="/" class="categories_content_card">
+            <picture>
+              <source srcset="" />
+              <!--TODO: Establecer imagen para movil  -->
+              <img
+                src="./assets/img/catg-accessories.webp"
+                alt="Men Category"
+                width="100%"
+              />
+            </picture>
+            <p>accessory's</p>
+          </a>
+        </article>
+      </section>
+      <!-- New Arrivals  -->
+      <section class="arrivals">
+        <h2 class="title">New Arrivals</h2>
+        <ul class="tab-menu">
+          <li id="all-tab" class="">ALL</li>
+          <li id="women-tab" class="">WOMEN'S</li>
+          <li id="men-tab" class="">MEN'S</li>
+          <li id="accessories-tab" class="">ACCESSORIES</li>
+        </ul>
+
+        <articcle id="arrivals-products" class="arrivals-products"><articcle >
+      </section>
+      <!-- Deal of the week -->
+      <section id="d-week-section" class="deal-week">
+        <aside id="deal">
+          <article class="deal-info">
+            <img id="deal-brand" src="" alt="" />
+            <p id="deal-product-name"></p>
+          </article>
+          <img src="" alt="Product of Week" id="d-week-product" />
+        </aside>  
+
+        <div class="content">
+          <h2 class="title">Deal of the week</h2>
+          <div class="counter">
+            <div class="days-content">
+              <span id="days">0</span>
+              <div class="text">days</div>
+            </div>
+
+            <div class="hours-content">
+              <span id="hours">0</span>
+              <div class="text">hours</div>
+            </div>
+
+            <div class="minutes-content">
+              <span id="minutes">0</span>
+              <div class="text">minutes</div>
+            </div>
+
+            <div class="seconds-content">
+              <span id="seconds">0</span>
+              <div class="text">seconds</div>
+            </div>
+          </div>
+          <button class="buy-deal"><a href="#">buy now</a></button>
+        </div>
+      </section>
+      <!-- Best Sellers -->
+      <section class="best-sellers">
+        <h2 class="title">Best Sellers</h2>
+        <article id="bestSellers_carousel"></article>
+      </section>
+      <section class="brands">
+        <h2 class="brands__title">allied brands</h2>
+        <p class="brands__desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vero adipisci iste rerum neque dolore minima maxime exercitationem? Doloremque error nisi asperiores porro, voluptas temporibus esse obcaecati architecto consequatur beatae!
+        </p>
+        <aside class="brands__logo">
+          <span class="ico-dolce-dg"></span>
+          <span class="ico-nike"></span>
+          <span class="ico-moschino"></span>
+          <span class="ico-adidas"></span>
+          <span class="ico-levis"></span>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./js/assetsSource.js"></script>
+    <script src="./js/bestSelleres.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/newArrivals.js"></script>
+    <script src="./js/slick.js"></script>
+  </body>
 </html>

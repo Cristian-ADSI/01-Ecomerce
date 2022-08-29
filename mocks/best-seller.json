@@ -1,0 +1,129 @@
+[
+    {
+        "category": "men",
+        "color": "",
+        "brand": "Block Buster",
+        "image": "./assets/products/best_sellers/men-jacket-RFMJCK01.webp",
+        "name": "Leather Jacket Urban",
+        "size": "L",
+        "product": {
+            "discount": 0,
+            "price": 500,
+            "reference": "RFMJCK01",
+            "sale": 0
+        }
+    },
+    {
+        "category": "men",
+        "color": "",
+        "brand": "Levis",
+        "image": "./assets/products/best_sellers/men-jacket-RFMJCK02.webp",
+        "name": "Women's Jersey",
+        "size": "L",
+        "product": {
+            "discount": 0,
+            "price": 610,
+            "reference": "RFMJCK02",
+            "sale": 0
+        }
+    },
+    {
+        "category": "men",
+        "color": "",
+        "brand": "Nike",
+        "image": "../assets/products/best_sellers/nike-men-shoe-RFMSHO03.webp",
+        "name": "Nike's Air Force One - Low Top",
+        "size": "40",
+        "product": {
+            "discount": 20,
+            "price": 180,
+            "reference": "RFMSHO03",
+            "sale": 0
+        }
+    },
+    {
+        "category": "men",
+        "color": "",
+        "brand": "Ecko UNLTD",
+        "image": "../assets/products/best_sellers/men-tshirt-RFMTSH01.webp",
+        "name": "Men's Hoddie",
+        "size": "L",
+        "product": {
+            "discount": 50,
+            "price": 590,
+            "reference": "RFMTSH01",
+            "sale": 0
+        }
+    },
+    {
+        "category": "men",
+        "color": "",
+        "brand": "Nike",
+        "image": "../assets/products/best_sellers/nike-men-shoe-RFMSHO01.webp",
+        "name": "Nike's Air Force One - Low Top",
+        "size": "40",
+        "product": {
+            "discount": 0,
+            "price": 130,
+            "reference": "RFMSHO01",
+            "sale": 0
+        }
+    },
+    {
+        "category": "women",
+        "color": "",
+        "brand": "Dolce & Gabbana",
+        "image": "../assets/products/best_sellers/women-blazer-RFWBLZ01.webp",
+        "name": "Women's Blazer smart",
+        "size": "40",
+        "product": {
+            "discount": 0,
+            "price": 230,
+            "reference": "RFWBLZ01",
+            "sale": 40
+        }
+    },
+    {
+        "category": "men",
+        "color": "",
+        "brand": "Nike",
+        "image": "../assets/products/best_sellers/nike-men-shoe-RFMSHO02.webp",
+        "name": "Nike's Air Force One - High Top",
+        "size": "40",
+        "product": {
+            "discount": 20,
+            "price": 180,
+            "reference": "RFMSHO02",
+            "sale": 0
+        }
+    },
+    {
+        "category": "women",
+        "color": "",
+        "brand": "Moschino",
+        "image": "../assets/products/best_sellers/women-coat-RFWCOT01.webp",
+        "name": "Smart Lather Coat",
+        "size": "40",
+        "product": {
+            "discount": 0,
+            "price": 600,
+            "reference": "RFWCOT012",
+            "sale": 0
+        }
+    },
+    {
+        "category": "women",
+        "color": "",
+        "brand": "Blauer",
+        "image": "../assets/products/best_sellers/women-jacket-RFWJCK01.webp",
+        "name": "Winter | Mountain Jacket",
+        "size": "40",
+        "product": {
+            "discount": 0,
+            "price": 200,
+            "reference": "RFWJCK01",
+            "sale": 0
+        }
+    }
+
+]

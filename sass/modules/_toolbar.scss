@@ -1,0 +1,174 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  padding: 0 $desktop-padding;
+
+  background-color: $bodyBgDark; 
+
+  .endorsement {
+    color: $txtCol-Dark;
+    background-color: none;
+    font-size: 14px;
+    line-height: 40px;
+    opacity: 0.7;
+  }
+
+  .content {
+    display: flex;
+
+    .menu_badge {
+      font-weight: 300;
+      max-height: 100%;
+      position: relative;
+      width: 90px;
+      z-index: 10;
+
+      &:hover {
+        .items {
+          @include menu-animate-in(0);
+        }
+      }
+
+      .badge_value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        color: $txtCol-Dark;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 40px;
+        opacity: 0.7;
+        text-align: center;
+      }
+
+      .items {
+        position: relative;
+        z-index: 10;
+
+        text-align: center;
+        width: 100%;
+
+        background-color: $white;
+        @include menu-animate-out(10px);
+
+        li {
+          color: $txtCol;
+          cursor: pointer;
+          padding: 15px 0;
+          border-bottom: solid 1px $bodyBg;
+
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+    }
+
+    .menu_lang {
+      border-right: 1px solid rgba(212, 202, 236, 0.4);
+      border-left: 1px solid rgba(212, 202, 236, 0.4);
+      max-height: 100%;
+      font-weight: 300;
+      position: relative;
+      z-index: 10;
+
+      &:hover {
+        .items {
+          @include menu-animate-in(0);
+        }
+      }
+
+      .lang_value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $txtCol-Dark;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 40px;
+        opacity: 0.7;
+        padding: 0 15px;
+        text-align: center;
+      }
+
+      .items {
+        background-color: $white;
+        text-align: center;
+        padding: 0 15px;
+        width: 100%;
+        @include menu-animate-out(10px);
+
+        li {
+          color: $txtCol;
+          cursor: pointer;
+          border-bottom: solid 1px $bodyBg;
+          padding: 15px 0;
+
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+    }
+
+    .menu_acount {
+      font-weight: 300;
+      max-height: 100%;
+      position: relative;
+      width: 130px;
+      z-index: 10;
+
+      &:hover {
+        .items {
+          @include menu-animate-in(0);
+        }
+      }
+
+      .acount_value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+
+        color: $txtCol-Dark;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 40px;
+        opacity: 0.7;
+        text-align: center;
+      }
+
+      .items {
+        text-align: center;
+        width: 100%;
+
+        background-color: $white;
+        @include menu-animate-out(10px);
+        li {
+          cursor: pointer;
+          padding: 15px 0;
+          border-bottom: solid 1px $bodyBg;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            color: $txtCol;
+          }
+          &:hover {
+            a {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

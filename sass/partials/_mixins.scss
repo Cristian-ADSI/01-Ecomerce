@@ -169,3 +169,8 @@
         padding: 5px 10px;
     }
 }
+@mixin SemiTablets() {
+    @media only screen and (max-width: 998px) {
+        @content;
+    }
+}

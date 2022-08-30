@@ -28,6 +28,9 @@
         height: 100%;
         @include d-flex();
         gap: 20px;
+        @include SemiTablets(){
+            flex-direction: row-reverse;
+        }
         .menu {
             @include d-flex();
             gap: 15px;

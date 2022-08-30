@@ -20,10 +20,10 @@
       <!-- Topbar  -->
       <nav>
         <!-- Toolbar  -->
-        <div class="toolbar">
+        <section class="toolbar">
           <p class="endorsement">FREE SHIPPING ON ALL U.S ORDERS OVER $50</p>
-          <div class="content">
-            <div class="menu_badge">
+          <aside class="content">
+            <article class="menu_badge">
               <p class="badge_value">
                 USD<span class="material-symbols-outlined">expand_more</span>
               </p>
@@ -34,9 +34,9 @@
                 <li class="EUR">EUR</li>
                 <li class="GBP">GBP</li>
               </ul>
-            </div>
+            </article>
 
-            <div class="menu_lang">
+            <article class="menu_lang">
               <p class="lang_value">
                 English<span class="material-symbols-outlined"
                   >expand_more</span
@@ -49,9 +49,9 @@
                 <li id="GRM">German</li>
                 <li id="SPN">Spanish</li>
               </ul>
-            </div>
+            </article>
 
-            <div class="menu_acount">
+            <article class="menu_acount">
               <p class="acount_value">
                 My Acount<span class="material-symbols-outlined"
                   >expand_more</span
@@ -73,16 +73,16 @@
                   </a>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
+            </article>
+          </aside>
+        </section>
         <!-- Navbar  -->
-        <div class="navbar">
-          <div class="brand">
+        <section class="navbar">
+          <aside class="brand">
             <a href="/">COLOR<span>SHOP</span></a>
-          </div>
+          </aside>
 
-          <div class="content">
+          <aside class="content">
             <ul class="menu">
               <li><a href="/">HOME</a></li>
               <li><a href="/">SHOP</a></li>
@@ -120,8 +120,9 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </aside>
+
+        </section>
       </nav>
       <!-- Banner -->
       <section class="home">
@@ -237,6 +238,7 @@
         <h2 class="title">Best Sellers</h2>
         <article id="bestSellers_carousel"></article>
       </section>
+      <!-- Brands  -->
       <section class="brands">
         <h2 class="brands__title">allied brands</h2>
         <p class="brands__desc">
@@ -250,13 +252,71 @@
           <span class="ico-levis"></span>
         </aside>
       </section>
+      <!-- Newsletters  -->
+      <section class="newsletters"> 
+        <aside class="content">
+          <article class="info">
+            <h2>newsletters</h2>
+            <p>Subscribe to our newsletter and get 30% off your first purchase</p>
+          </article>
+          <article class="form">
+            <form >
+              <input type="email" placeholder="Your email" required>
+              <button type="button">submit</button>
+            </form>
+          </article>
+        </aside>
+      </section>
+      
     </main>
+    <footer>
+      <!-- Contact  -->
+      <section class="contact">   
+        <aside class="identity">
+          <img src="./assets/logos/devLogoDark.svg" alt="Developer Logo" > 
+          <p>cristianotero777@gmail.com</p>
+          <p>Location: <span>Medellin/Colombia</span></p>
+          <a href="https://www.linkedin.com/in/cristian-otero-dev/?locale=en_US" target="_blank">
+            Watch on linkeding</a> 
+        </aside>
+
+        <aside class="info">
+          <h3 class="title">contact developer</h3>
+          <p class="desc">
+            If you want to contact me I am an email or Whatsapp away. I will be waiting for your message
+          </p>
+          <button type="button" class="contact-btn" id="openContactModalBtn">
+            Send Message
+          </button> 
+        </aside>
+      </section>
+      <p class="release">Release version: 1.0.0</p>
+    </footer>
+
+    <section id ="contactModalOverlay" class="contact-modal-overlay">
+      
+      <form id ="contactForm" class="" > 
+        <input type="text" placeholder="You personal or company name" required>
+        <input type="email" placeholder="Contact email" required>
+        <input type="text" placeholder="Subject" required>
+        <a href="https://api.whatsapp.com/send?phone=573024684251" target="_blank"> 
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="Whatsapp icon"> 
+          Direct Message
+        </a>
+        <textarea cols="30" rows="10" required ></textarea>
+        <article class="buttons">
+          <button id="closeContacModalBtn" type="button">close</button>
+          <button id="sendMessageBtn" type="button">submit</button>
+        </article>
+      </form>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="./js/assetsSource.js"></script>
     <script src="./js/bestSelleres.js"></script>
     <script src="./js/cart.js"></script>
     <script src="./js/counter.js"></script>
+    <script src="./js/contactModal.js"></script>
     <script src="./js/newArrivals.js"></script>
     <script src="./js/slick.js"></script>
   </body>

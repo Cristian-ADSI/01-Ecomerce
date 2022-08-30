@@ -1,11 +1,13 @@
 @use "./modules/bestSellers";
 @use "./modules/brands";
 @use "./modules/categories";
+@use "./modules/contact";
+@use "./modules/contactModal";
+
 @use "./modules/dealWeek";
 @use "./modules/header";
 @use "./modules/newArrivals";
-
-
+@use "./modules/newsletters";
 
 @import "./partials/variables";
 @import "./partials/fonts";
@@ -18,7 +20,18 @@
 }
 
 body {
+  position: relative;
   background-color: $bodyBg;
+}
+footer {
+  padding: 0 $desktop-padding;
+  background-color: $bodyBgDark;
+  .release {
+    font-size: 14px;
+    position: relative;
+    right: 0;
+    color: $txtCol-Dark;
+  }
 }
 
 h1,
@@ -28,7 +41,7 @@ h4,
 h5 {
   margin: 0;
   padding: 0;
-  font-family: "Opens Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 p {

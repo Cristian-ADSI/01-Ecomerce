@@ -3,7 +3,7 @@ const spanSeconds = document.getElementById('seconds');
 const spanHours = document.getElementById('hours');
 const spanDays = document.getElementById('days');
 
-const limitDate = new Date('30 aug 2022');
+const limitDate = new Date('04 sep 2022');
 
 function counter() {
   const currentDate = new Date();

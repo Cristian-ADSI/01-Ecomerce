@@ -1,0 +1,55 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+@import "../partials/extends";
+
+.newsletters {
+    background-color: $gray;
+    padding: 0 $desktop-padding;
+    width: 100%;
+    .content {
+        padding: 2% 0;
+        @include d-flex(center, space-between);
+        .info {
+            width: 50%;
+            @include d-flex();
+            flex-direction: column;
+            h2 {
+                color: $red-l;
+                text-align: center;
+                text-transform: capitalize;
+                font-size: 24px;
+                font-weight: 400;
+                margin-bottom: 10px;
+                @extend %Poppins;
+            }
+            p {
+                color: $txtCol;
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+        .form {
+            width: 50%;
+            form {
+                width: 100%;
+                @include d-flex();
+                input {
+                    border: none;
+                    font-size: 16px;
+                    height: 40px;
+                    outline: none;
+                    text-align: center;
+                    width: 50%;
+                }
+                button {
+                    cursor: pointer;
+                    font-size: 16px;
+                    height: 40px;
+                    padding: 10px 20px;
+                    text-transform: capitalize;
+                    @include buttonAction($white, $red-l, $red);
+                }
+            }
+        }
+    }
+}

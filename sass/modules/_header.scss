@@ -8,8 +8,8 @@
 header {
     margin-bottom: 50px;
     .home {
-        $urlImage: "../../assets/img/banner-header.webp";
-        @include banner($urlImage);
+        $urlImage: "../../assets/img/banner.jpg";
+        @include banner($urlImage,82vh);
 
         .content {
             position: absolute;

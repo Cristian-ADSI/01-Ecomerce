@@ -1,0 +1,91 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+@import "../partials/extends";
+
+.contact-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    opacity: 0;
+    width: 100%;
+    z-index: 20;
+    pointer-events: none;
+    transition: all ease-in-out 0.2s;
+
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+    @include d-flex();
+    form {
+        padding: 20px;
+        background-color: #fff;
+        height: 75vh;
+        width: 60%;
+        transform: translateY(50px);
+        transition: all ease-in 0.2s;
+        opacity: 0;
+        @include d-flex(center, space-between);
+        flex-wrap: wrap;
+        &.show {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all ease-in 0.2s;
+            transition-delay: 0.2s;
+        }
+        a {
+            @include d-flex();
+            color: $txtCol-70;
+            font-weight: 600;
+            gap: 10px;
+            transition: all ease .2s;
+            width: 48%;
+            @extend %Poppins;font-size: 20px;
+            &:hover{
+                color: $txtCol;
+            }
+            img {
+                width: 30px;
+            }
+        }
+        input {
+            color: $bodyBgDark-l;
+            border: solid 1px $txtCol-30;
+            font-size: 16px;
+            height: 40px;
+            outline: none;
+            text-align: center;
+            width: 48%;
+        }
+        textarea {
+            color: $bodyBgDark-l;
+            border: solid 1px $txtCol-30;
+            font-size: 16px;
+            padding: 20px;
+            outline: none;
+            resize: none;
+            width: 96%;
+        }
+        .buttons {
+            display: block;
+            width: 96%;
+            @include d-flex(center, space-between);
+            #sendMessageBtn{
+                font-size: 16px;
+                text-transform: capitalize;
+                height: 40px;
+                padding: 10px 20px;
+                @include buttonAction($white,$red-l, $red)
+            }
+            #closeContacModalBtn{
+                font-size: 16px;
+                text-transform: capitalize;
+                height: 40px;
+                padding: 10px 20px;
+                @include buttonAction($white, $txtCol-50, $txtCol-70); 
+            } 
+        }
+    }
+}

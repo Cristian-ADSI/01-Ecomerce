@@ -18,7 +18,7 @@
     }
     &__logo {
         margin: 50px 0;
-        @include d-flex(center, space-between); 
+        @include d-flex(center, space-between);
         span {
             font-size: calc(100% * 8);
             color: $txtCol-70;
@@ -33,8 +33,11 @@
             &.ico-moschino:hover {
                 color: $txtCol;
             }
-            &.ico-adidas:hover {
-                color: $blue;
+            &.ico-adidas {
+                font-size: calc(100% * 12);
+                &:hover {
+                    color: $blue;
+                }
             }
             &.ico-levis:hover {
                 color: $red;

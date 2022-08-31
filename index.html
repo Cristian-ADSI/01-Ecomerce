@@ -83,7 +83,7 @@
           </aside>
 
           <aside class="content">
-            <ul class="menu">
+            <ul id="menu" class="menu ">
               <li><a href="/">HOME</a></li>
               <li><a href="/">SHOP</a></li>
               <li><a href="/">SALES</a></li>
@@ -92,17 +92,17 @@
               <li><a href="/">CONTACT</a></li>
             </ul>
 
-            <div class="tools">
-              <div class="search">
+            <article class="tools">
+              <article class="search">
                 <input type="text" placeholder="Search Products" />
                 <span class="material-symbols-outlined"> search </span>
-              </div>
+              </article>
 
-              <div id="cart" class="cart">
+              <article id="cart" class="cart">
                 <span id="cart-items" class="items">0</span>
                 <span class="material-symbols-outlined"> local_mall </span>
-                <div class="cart__list">
-                  <div class="cart__list-items">
+                <article class="cart__list">
+                  <article class="cart__list-items">
                     <table id="cart-table">
                       <thead>
                         <tr>
@@ -115,14 +115,17 @@
                       </thead>
                       <tbody></tbody>
                     </table>
-                  </div>
+                  </article>
                   <button id="empty-cart">EMPTY CART</button>
-                </div>
-              </div>
-            </div>
+                </article>
+              </article>
+            </article>
           </aside>
-
+          <span id="toogleMenu" class="material-symbols-outlined menu-icon"> 
+            menu
+          </span>
         </section>
+        
       </nav>
       <!-- Banner -->
       <section class="home">
@@ -317,6 +320,7 @@
     <script src="./js/cart.js"></script>
     <script src="./js/counter.js"></script>
     <script src="./js/contactModal.js"></script>
+    <script src="./js/togleMenu.js"></script>
     <script src="./js/newArrivals.js"></script>
     <script src="./js/slick.js"></script>
   </body>

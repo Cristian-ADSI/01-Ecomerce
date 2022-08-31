@@ -4,13 +4,13 @@
 
 .navbar {
     position: relative;
-    @include d-flex(center, space-between);
 
     background-color: $white;
     padding: 0 $desktop-padding;
     height: 90px;
     width: 100%;
     z-index: 5;
+    @include d-flex(center, space-between);
     .brand {
         a {
             color: $txtCol;
@@ -25,13 +25,15 @@
     }
 
     .content {
+        position: relative;
         height: 100%;
-        @include d-flex();
         gap: 20px;
+        @include d-flex();
         .menu {
             @include d-flex();
             gap: 15px;
             li {
+                pointer-events: all;
                 a {
                     color: $txtCol;
                     font-size: 14px;
@@ -43,25 +45,26 @@
             }
         }
         .tools {
-            @include d-flex();
             gap: 20px;
+            @include d-flex();
             .search {
                 @include d-flex();
                 height: 100%;
                 input {
                     border: none;
                     outline: none;
-                    height: 30px;
+                    height: 25px;
                     text-align: center;
                     font-size: 16px;
                 }
                 span {
                     display: inline-block;
-                    background-color: $bodyBgDark;  
+                    background-color: $bodyBgDark;
                     border-radius: 0 5px 5px 0;
                     color: $white;
-                    padding: 3px 8px;
-                    line-height: 30px;
+                    padding: 1px 8px;
+                    line-height: 25px;
+                    font-size: 18px;
                 }
             }
             .cart {
@@ -164,6 +167,90 @@
                     }
                 }
             }
+        }
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    @include tablets() {
+        height: 60px;
+        .content {
+            flex-direction: row-reverse;
+            .menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                transform: translateY(100px) translateX(100%);
+                flex-direction: column;
+
+                background-color: $white;
+                height: calc(100vh - 100px);
+                transition: all ease 0.4s;
+                width: 100%;
+                &.show {
+                    transform: translateY(100px) translateX(0);
+                }
+            }
+            .tools {
+                .cart {
+                    span {
+                        font-size: 35px;
+                    }
+                    .items {
+                        top: -5px;
+                        right: -20px;
+                        height: 22px;
+                        width: 22px;
+
+                        font-size: 12px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+        .menu-icon {
+            color: $txtCol-70;
+            font-size: 30px;
+            display: block;
+        }
+    }
+    @include semiTablets() {
+        .brand {
+            a {
+                font-size: 18px;
+            }
+        }
+        .content {
+            .tools {
+                gap: 5px;
+                justify-content: flex-start;
+                .search {
+                    input {
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+    @include mobiles() {
+        height: 75px;
+        .brand {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            a {
+                font-size: 22px;
+            }
+        }
+        .content {
+            align-items: flex-end;
+        }
+        .menu-icon{
+            align-self: flex-end;
+            height: 35px;
         }
     }
 }

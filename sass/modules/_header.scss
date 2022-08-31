@@ -9,7 +9,7 @@ header {
     margin-bottom: 50px;
     .home {
         $urlImage: "../../assets/img/banner.jpg";
-        @include banner($urlImage,82vh);
+        @include banner($urlImage, 82vh);
 
         .content {
             position: absolute;
@@ -35,9 +35,28 @@ header {
             }
             button {
                 font-size: 16px;
-                padding: 10px 25px; 
-                @include buttonAction($white,$red-l,$red);
+                padding: 10px 25px;
+                @include buttonAction($white, $red-l, $red);
             }
+        }
+    }
+
+    @include tablets() {
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            z-index: 30;
+        }
+        .home {
+            margin-top: 99px;
+        }
+    }
+    @include semiTablets(){
+        nav{
+            
         }
     }
 }

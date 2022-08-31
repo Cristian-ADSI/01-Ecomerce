@@ -169,3 +169,21 @@
         padding: 5px 10px;
     }
 }
+
+@mixin tablets() {
+    @media  (max-width: 998.98px) {
+        @content;
+    }
+}
+
+@mixin semiTablets() { 
+    @media  (max-width: 768.98px) {
+        @content;  
+    }
+}
+
+@mixin mobiles() { 
+    @media  (max-width: 480.98px) {
+        @content;  
+    }
+}

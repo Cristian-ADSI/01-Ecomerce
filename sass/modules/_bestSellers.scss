@@ -65,4 +65,9 @@
             }
         }
     }
+    @include tablets{
+        #bestSellers_carousel {
+            display: none;
+        }
+    }
 }

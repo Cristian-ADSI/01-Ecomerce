@@ -227,14 +227,30 @@
                 gap: 5px;
                 justify-content: flex-start;
                 .search {
-                    input{
+                    input {
                         width: 130px;
                     }
                 }
             }
         }
-        .menu-icon {
-           
+    }
+    @include mobiles() {
+        height: 70px;
+        .brand {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            a {
+                font-size: 22px;
+            }
+        }
+        .content {
+            align-items: flex-end;
+        }
+        .menu-icon{
+            align-self: flex-end;
+            height: 35px;
         }
     }
 }

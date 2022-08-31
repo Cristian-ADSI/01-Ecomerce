@@ -52,4 +52,9 @@
             @include productCard(19%,$txtCol-30);
         }
     }
+    @include mobiles(){
+        .tab-menu{
+            display: none;
+        }
+    }
 }

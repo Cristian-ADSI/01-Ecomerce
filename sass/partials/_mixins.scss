@@ -181,3 +181,9 @@
         @content;  
     }
 }
+
+@mixin mobiles() { 
+    @media  (max-width: 480.98px) {
+        @content;  
+    }
+}

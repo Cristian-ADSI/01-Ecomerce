@@ -8,7 +8,7 @@
 header {
     margin-bottom: 50px;
     .home {
-        $urlImage: "../../assets/img/banner.jpg";
+        $urlImage: "../../assets/img/banner-home-D.jpg"; 
         @include banner($urlImage, 82vh);
 
         .content {
@@ -51,12 +51,13 @@ header {
             z-index: 30;
         }
         .home {
+            $urlImage: "../../assets/img/banner-home-SMD.webp"; 
+            @include banner($urlImage, 100vh);
             margin-top: 99px;
         }
     }
-    @include semiTablets(){
-        nav{
-            
+    @include semiTablets() {
+        nav {
         }
     }
 }

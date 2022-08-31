@@ -44,4 +44,11 @@
             }
         }
     }
+    @include tablets(){
+        &__logo{
+            span{
+                display: none;
+            }
+        }
+    }
 }

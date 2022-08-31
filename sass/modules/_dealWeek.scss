@@ -110,4 +110,13 @@
             @include buttonAction($white, $bodyBgDark-l, $bodyBgDark);
         }
     }
+
+    @include tablets(){
+        .content{
+            .counter{
+
+                display: none;
+            }
+        }
+    }
 }

@@ -53,7 +53,7 @@
                 input {
                     border: none;
                     outline: none;
-                    height: 30px;
+                    height: 25px;
                     text-align: center;
                     font-size: 16px;
                 }
@@ -62,8 +62,9 @@
                     background-color: $bodyBgDark;
                     border-radius: 0 5px 5px 0;
                     color: $white;
-                    padding: 3px 8px;
-                    line-height: 30px;
+                    padding: 1px 8px;
+                    line-height: 25px;
+                    font-size: 18px;
                 }
             }
             .cart {
@@ -184,7 +185,7 @@
                 transform: translateY(100px) translateX(100%);
                 flex-direction: column;
 
-                background-color: $white; 
+                background-color: $white;
                 height: calc(100vh - 100px);
                 transition: all ease 0.4s;
                 width: 100%;
@@ -215,6 +216,25 @@
             display: block;
         }
     }
-
-
+    @include semiTablets() {
+        .brand {
+            a {
+                font-size: 18px;
+            }
+        }
+        .content {
+            .tools {
+                gap: 5px;
+                justify-content: flex-start;
+                .search {
+                    input{
+                        width: 130px;
+                    }
+                }
+            }
+        }
+        .menu-icon {
+           
+        }
+    }
 }

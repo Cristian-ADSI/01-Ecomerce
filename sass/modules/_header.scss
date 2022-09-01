@@ -8,7 +8,7 @@
 header {
     margin-bottom: 50px;
     .home {
-        $urlImage: "../../assets/img/banner-home-D.jpg"; 
+        $urlImage: "../../assets/img/banner-home-D.jpg";
         @include banner($urlImage, 82vh);
 
         .content {
@@ -18,7 +18,7 @@ header {
 
             padding: 0 $desktop-padding;
             transform: translateY(-50%);
-            width: 80%;
+            width: 100%;
             .tags {
                 color: $txtCol;
                 @extend %Poppins;
@@ -32,6 +32,7 @@ header {
                 line-height: 75px;
                 opacity: 0.95;
                 margin-bottom: 30px;
+                width: 80%;
             }
             button {
                 font-size: 16px;
@@ -41,6 +42,30 @@ header {
         }
     }
 
+    @include semiDesktop() {
+        .home {
+            $urlImage: "../../assets/img/banner-home-SMD.webp";
+            @include banner($urlImage, 100vh);
+            .content {
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .tags {
+                    color: $white;
+                    text-align: center;
+                }
+                .advertising {
+                    color: $white;
+                    text-align: center;
+                    text-shadow: #0000008a 1px 1px;
+                }
+                button {
+                    font-size: 18px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
     @include tablets() {
         nav {
             position: fixed;
@@ -51,13 +76,17 @@ header {
             z-index: 30;
         }
         .home {
-            $urlImage: "../../assets/img/banner-home-SMD.webp"; 
-            @include banner($urlImage, 100vh);
             margin-top: 99px;
         }
     }
-    @include semiTablets() {
-        nav {
+    @include mobiles() {
+        .home {
+            .content {
+                .advertising {
+                    font-size: 50px;
+                    width: 100%;
+                }
+            }
         }
     }
 }

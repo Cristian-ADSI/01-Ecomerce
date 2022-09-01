@@ -170,20 +170,23 @@
     }
 }
 
-@mixin tablets() {
-    @media  (max-width: 998.98px) {
+@mixin mobiles() {
+    @media only screen and (max-width: 480.98px) {
         @content;
     }
 }
-
-@mixin semiTablets() { 
-    @media  (max-width: 768.98px) {
-        @content;  
+@mixin semiTablets() {
+    @media only screen and (max-width: 768.98px) {
+        @content;
     }
 }
-
-@mixin mobiles() { 
-    @media  (max-width: 480.98px) {
-        @content;  
+@mixin tablets() {
+    @media only screen and (max-width: 998.98px) {
+        @content;
+    }
+}
+@mixin semiDesktop() {
+    @media only screen and (max-width: 1200.98px) {
+        @content;
     }
 }

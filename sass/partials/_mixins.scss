@@ -170,13 +170,8 @@
     }
 }
 
-@mixin mobiles() {
-    @media only screen and (max-width: 480.98px) {
-        @content;
-    }
-}
-@mixin semiTablets() {
-    @media only screen and (max-width: 768.98px) {
+@mixin semiDesktop() {
+    @media only screen and (max-width: 1200.98px) {
         @content;
     }
 }
@@ -185,8 +180,14 @@
         @content;
     }
 }
-@mixin semiDesktop() {
-    @media only screen and (max-width: 1200.98px) {
+@mixin semiTablets() {
+    @media only screen and (max-width: 768.98px) {
         @content;
     }
 }
+@mixin mobiles() {
+    @media only screen and (max-width: 480.98px) {
+        @content;
+    }
+}
+

@@ -226,6 +226,13 @@
             }
         }
         .content {
+            .menu{
+                height: calc(100vh - 120px);
+                transform: translateY(120px) translateX(100%);
+                &.show{
+                    transform: translateY(120px) translateX(0);
+                }
+            }
             .tools {
                 gap: 5px;
                 justify-content: flex-start;

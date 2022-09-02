@@ -44,17 +44,40 @@
     &-products {
         flex-wrap: wrap;
         margin: 50px 0;
-        
         @include d-flex(center, flex-start);
 
         .product {
-            margin: 0 .5%; 
-            @include productCard(19%,$txtCol-30);
+            margin: 0 auto;
+            @include productCard(19%, $txtCol-30);
         }
     }
-    @include mobiles(){
-        .tab-menu{
-            display: none;
+
+    @include tablets() {
+        &-products {
+            .product {
+                width: 24%;
+            }
+        }
+    }
+
+    @include semiTablets() {
+        &-products {
+            .product {
+                width: 32%;
+            }
+        }
+    }
+    @include mobiles() {
+        .tab-menu {
+            li {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+        }
+        &-products {
+            .product {
+                width: 49%;
+            }
         }
     }
 }

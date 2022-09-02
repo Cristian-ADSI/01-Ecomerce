@@ -18,7 +18,7 @@
             position: relative;
             overflow: hidden;
             display: block;
-            line-height:0;  
+            
             &:hover {
                 img {
                     filter: brightness(0.8);
@@ -28,8 +28,9 @@
                 }
             }
             img {
-                width: 100%;
                 display: block;
+                line-height:0;  
+                width: 100%;
                 transition: all ease-in-out 0.3s;
                 filter: brightness(1);
             }
@@ -44,7 +45,6 @@
                 @extend %Poppins;
                 font-size: 22px;
                 font-weight: 600;
-                line-height:25px;
                 padding: 5px 10px;
                 text-transform: uppercase;
                 transform: translate(-50%, -50%);

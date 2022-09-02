@@ -10,15 +10,15 @@
         @extend %sectionTitle;
     }
     &_content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         margin-bottom: 50px;
         width: 100%;
+        @include d-flex();
 
         &_card {
             position: relative;
             overflow: hidden;
+            display: block;
+            line-height:0;  
             &:hover {
                 img {
                     filter: brightness(0.8);
@@ -28,6 +28,7 @@
                 }
             }
             img {
+                width: 100%;
                 display: block;
                 transition: all ease-in-out 0.3s;
                 filter: brightness(1);
@@ -43,12 +44,25 @@
                 @extend %Poppins;
                 font-size: 22px;
                 font-weight: 600;
+                line-height:25px;
                 padding: 5px 10px;
                 text-transform: uppercase;
                 transform: translate(-50%, -50%);
                 transition: all ease-in-out 0.2s;
                 &:hover {
                     color: $red-l;
+                }
+            }
+        }
+    }
+
+    @include semiTablets(){ 
+        &_content{
+            flex-wrap: wrap;
+            &_card{
+                width: 100%; 
+                p{
+                    font-size: 16px;
                 }
             }
         }

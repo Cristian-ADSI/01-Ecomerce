@@ -10,7 +10,6 @@ header {
     .home {
         $urlImage: "../../assets/img/banner-home-D.jpg";
         @include banner($urlImage, 82vh);
-
         .content {
             position: absolute;
             left: 0;
@@ -57,7 +56,7 @@ header {
                 .advertising {
                     color: $white;
                     text-align: center;
-                    text-shadow: #0000008a 1px 1px;
+                    width: 100%;
                 }
                 button {
                     font-size: 18px;
@@ -79,12 +78,20 @@ header {
             margin-top: 99px;
         }
     }
+    @include semiTablets() {
+        .home {
+            .content {
+                .advertising {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
     @include mobiles() {
         .home {
             .content {
                 .advertising {
                     font-size: 50px;
-                    width: 100%;
                 }
             }
         }

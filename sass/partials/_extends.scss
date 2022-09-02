@@ -24,6 +24,10 @@
         background-color: $red-l;
         margin: 15px auto;
     }
+    @include semiDesktop(){
+    font-size: 35px;
+
+    }
 }
 
 

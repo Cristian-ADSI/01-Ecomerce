@@ -44,10 +44,34 @@
             }
         }
     }
-    @include tablets(){
-        &__logo{
-            span{
-                display: none;
+
+    @include tablets() {
+        &__logo {
+            span {
+                font-size: calc(100% * 6);
+                &.ico-adidas {
+                    font-size: calc(100% * 10);
+                }
+            }
+        }
+    }
+    @include semiTablets() {
+        &__logo {
+            span {
+                font-size: calc(100% * 3.5);
+                &.ico-adidas {
+                    font-size: calc(100% * 6);
+                }
+            }
+        }
+    }
+    @include mobiles() {
+        &__logo {
+            span {
+                font-size: calc(100% * 3);
+                &.ico-adidas {
+                    font-size: calc(100% * 5);
+                }
             }
         }
     }

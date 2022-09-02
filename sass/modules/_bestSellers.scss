@@ -23,7 +23,7 @@
             position: absolute;
             right: 0;
             top: 50%;
-            transform: translate(120%,-50%);
+            transform: translate(120%, -50%);
 
             color: $white;
             cursor: pointer;
@@ -32,13 +32,12 @@
             font-size: 30px;
             height: 50px;
             margin-bottom: 30px;
-            transition: all ease .1s;
+            transition: all ease 0.1s;
             width: 50px;
             @include d-flex();
 
-            &:hover{
-            background-color: $red-l;
-
+            &:hover {
+                background-color: $red-l;
             }
         }
 
@@ -46,7 +45,7 @@
             position: absolute;
             left: 0;
             top: 50%;
-            transform: translate(-120%,-50%);
+            transform: translate(-120%, -50%);
 
             color: $white;
             cursor: pointer;
@@ -55,19 +54,29 @@
             font-size: 30px;
             height: 50px;
             margin-bottom: 30px;
-            transition: all ease .1s;
+            transition: all ease 0.1s;
             width: 50px;
             @include d-flex();
 
-            &:hover{
-            background-color: $red-l;
-
+            &:hover {
+                background-color: $red-l;
             }
         }
     }
-    @include tablets{
+    @include semiTablets {
+        height: 80vh;
         #bestSellers_carousel {
-            display: none;
+            .prev-btn {   
+                top: 100%;
+                transform: translate(105%, 30%);
+            }
+            .next-btn {
+                top: 100%;
+                transform: translate(-100%, 30%);
+            }
         }
+    }
+    @include mobiles(){
+        height: 100vh;
     }
 }

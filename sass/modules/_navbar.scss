@@ -270,6 +270,29 @@
                     transform: translateY(135px) translateX(0);
                 }
             }
+            .tools {
+                .cart {
+                    &__list {
+                        position: fixed;
+                        width: 375px;
+                        right: unset;
+                        left: 0;
+                        top: 0;
+                        opacity: 0;
+                        pointer-events: none;
+                        transform: translateY(150px);
+                        min-height: calc(50vh - 135px);
+                        max-height: calc(100vh - 135px);
+                    }
+                    &:hover {
+                        .cart__list {
+                            opacity: 1;
+                            pointer-events: all;
+                            transform: translateY(135px);
+                        }
+                    }
+                }
+            }
         }
         .menu-icon {
             align-self: flex-end;

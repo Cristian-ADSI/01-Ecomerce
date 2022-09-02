@@ -32,6 +32,22 @@
           '<span class="material-symbols-outlined prev-btn">arrow_back_ios</span>',
         nextArrow:
           '<span class="material-symbols-outlined next-btn">arrow_forward_ios</span>',
+        responsive: [
+          {
+            breakpoint: 768.98,
+            settings: {
+              slidesToScroll:2,
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 480.98,
+            settings: {
+              slidesToScroll:1,
+              slidesToShow: 1, 
+            },
+          },
+        ],
       });
     });
   }

@@ -56,6 +56,10 @@
         }
     }
     @include semiTablets() {
+        &__desc {
+            margin: 0 0;
+            width: 100%;
+        }
         &__logo {
             span {
                 font-size: calc(100% * 3.5);

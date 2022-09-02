@@ -52,4 +52,27 @@
             }
         }
     }
+    @include semiTablets() {
+        padding: 30px $desktop-padding;
+
+        .content {
+            flex-direction: column;
+            gap: 20px;
+
+            .info {
+                width: 100%;
+            }
+            .form {
+                width: 100%;
+                form{
+                    input{
+                        width: 70%;
+                    }
+                    button{
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
 }

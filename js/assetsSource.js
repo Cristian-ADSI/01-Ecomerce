@@ -9,6 +9,10 @@ const dealWeekBrand = document.getElementById('deal-brand');
 const dealWeekProductName = document.getElementById('deal-product-name');
 
 dealWeekSection.style.background = `url(${dWBanner})`;
+dealWeekSection.style.backgroundPosition = '0 0';
+dealWeekSection.style.backgroundRepeat = 'no-repeat';
+dealWeekSection.style.backgroundSize = 'cover';
+
 dealWeekProduct.src = `${dWProduct}`;
 dealWeekBrand.src = `${dWBrand}`;
 dealWeekProductName.textContent = `${dwProductName}`;

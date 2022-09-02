@@ -186,12 +186,18 @@
                 top: 0;
                 left: 0;
                 transform: translateY(100px) translateX(100%);
+                @include d-flex();
                 flex-direction: column;
 
                 background-color: $white;
                 height: calc(100vh - 100px);
                 transition: all ease 0.4s;
                 width: 100%;
+                li {
+                    a {
+                        font-size: 24px;
+                    }
+                }
                 &.show {
                     transform: translateY(100px) translateX(0);
                 }
@@ -226,10 +232,10 @@
             }
         }
         .content {
-            .menu{
+            .menu {
                 height: calc(100vh - 120px);
                 transform: translateY(120px) translateX(100%);
-                &.show{
+                &.show {
                     transform: translateY(120px) translateX(0);
                 }
             }
